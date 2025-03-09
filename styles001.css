@@ -84,7 +84,6 @@ section {
 .hobby-cards {
     display: flex;
     justify-content: center;
-    height: 250px;
     gap: 20px;
     flex-wrap: wrap;
     align-items: stretch;
