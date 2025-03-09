@@ -80,10 +80,6 @@ section {
     text-align: center;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
 .hobby-cards {
     display: flex;
     justify-content: center;
