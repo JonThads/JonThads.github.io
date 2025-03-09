@@ -5,8 +5,8 @@ Jon Thaddeus Laguitao
 Student Id No: 2023-30106
 -------------------------------------------------------------------
 This file contains the ff:
-index.html - serves as the main landing page
+index.html - serves as the Main Landing Page
 picture.jpg - personal profile picture
-styles001.css - contains the css for the design of the landding page
+styles001.css - contains the css for the design of the Landing Page
 script.js - for the button interaction
 -------------------------------------------------------------------
