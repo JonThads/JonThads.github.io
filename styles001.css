@@ -37,6 +37,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -86,12 +87,12 @@ section {
     height: 250px;
     gap: 20px;
     flex-wrap: wrap;
-
+    align-items: stretch;
 }
 
 .about-card {
     max-width: 500px;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 30px;
 }
@@ -132,5 +133,10 @@ section {
     .hobby-cards {
         flex-direction: column;
         align-items: center;
+    }
+
+    .about-card {
+        max-width: 95%;
+        padding: 20px;
     }
 }
