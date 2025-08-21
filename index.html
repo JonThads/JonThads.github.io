@@ -1,77 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMSC 207 | Laguitao | 2023-30106</title>
-    <link rel="stylesheet" href="styles001.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing projects, accomplishments, and educational background in IT and Computer Science">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>My Personal Profile</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#hobbies">Hobbies & Interests</a></li>
-                <li><a href="#contact">Contact Info</a></li>
-            </ul>
-        </nav>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header role="banner">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Your Name - Portfolio Home">Jon Thaddeus Laguitao</a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <!--
+                    <li><a href="#projects">Projects</a></li>
+                    -->
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    
-    <section id="about">
-        <div class="card about-card">
-            <h2>About Me</h2>
-            <img src="picture.jpg" alt="Profile Picture" class="profile-img">
-            <hr class="divider">
-            <div class="about-info">
-                <p>Hello! I'm Jon Thaddeus Laguitao! You can call me Thads!</p>
-                <p>I earned my BS ECE degree from Ateneo de Davao University and transitioned into the IT industry, leading me to enroll in UPOU's DCS Program</p>
-                <p>Student ID: 2023-30106</p>
-                <p>Program: Diploma in Computer Science</p>
-            </div>
-            <hr class="divider">
-            <button class="btn" onclick="showFunFact()">Click for a Fun Fact</button>
+
+    <div class="breadcrumbs">
+        <div class="breadcrumb-container">
+            <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+                <a href="#">Home</a>
+                <span class="breadcrumb-separator" aria-hidden="true">›</span>
+                <span aria-current="page">Portfolio</span>
+            </nav>
         </div>
-    </section>
-    
-    <section id="hobbies">
-        <h2>Hobbies & Interests</h2>
-        <div class="hobby-cards">
-            <div class="card">
-                <h3>Staying Ahead</h3>
-                <hr class="divider">
-                <div class="hobby-info">
-                    <p>I enjoy exploring various documentaries and news, particularly those focused on Geopolitics and Economics</p>
+    </div>
+
+    <main id="main-content" role="main">
+        <section class="hero-section">
+            <div class="geo-shape-1"></div>
+            <div class="geo-shape-2"></div>
+            <div class="geo-shape-3"></div>
+            <div class="geo-shape-4"></div>
+            <div class="geo-shape-5"></div>
+            <div class="geo-shape-6"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to My Portfolio</h1>
+                <p class="hero-subtitle">IT Professional | Licensed Electronics Engineer | Problem Solver</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 class="card-title">Professional Background</h3>
+                    <div class="card-content">
+                        <p>Enthusiastic IT professional with a broad foundation in computer science and technology. I am driven by continuous learning and enjoy tackling challenging technical problems.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Current Focus</h3>
+                    <div class="card-content">
+                        <p>Currently expanding my knowledge in Automated Testing, Cybersecurity, Data Science, and Emerging Technologies to stay at the forefront of the industry.</p>
+                        <br>
+                        <p>Automated Testing: Selenium and PyTest</p>
+                        <p>Accessibility Testing: WCAG</p>
+                        <p>Cybersecurity: TryHackMe</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Mission</h3>
+                    <div class="card-content">
+                        <p>To leverage technology to create impactful solutions that will shape the nation.</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h3>Chillin'</h3>
-                <hr class="divider">
-                <div class="hobby-info">
-                    <p>Playing Strategy and Role-Playing Games like SimCity, GTA V, etc</p>
+        </section>
+        <!--
+        <section id="projects" class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3 class="card-title">Web Application Development</h3>
+                    <div class="card-content">
+                        <p>Full-stack web applications built with modern frameworks and technologies. Includes responsive design, database integration, and user authentication systems.</p>
+                        <p><strong>Technologies:</strong> React, Node.js, MongoDB, Express</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Data Analysis Project</h3>
+                    <div class="card-content">
+                        <p>Comprehensive data analysis and visualization project using machine learning algorithms to derive insights from complex datasets.</p>
+                        <p><strong>Technologies:</strong> Python, Pandas, Scikit-learn, Matplotlib</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Mobile Application</h3>
+                    <div class="card-content">
+                        <p>Cross-platform mobile application with intuitive user interface and seamless performance across different devices.</p>
+                        <p><strong>Technologies:</strong> React Native, Firebase, Redux</p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <h3>Studying</h3>
-                <hr class="divider">
-                <div class="hobby-info">
-                    <p>Since I'm enrolled in the DCS program, I should be focusing on my studies</p>
+        </section>
+        -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="assets/images/logos/UPOU.png" alt="University of the Philippines - Open University Logo">
+                        <div class="timeline-logo-placeholder"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Postgraduate Diploma in Computer Science</h3>
+                        <p class="timeline-date">2023 - 2025</p>
+                        <p class="timeline-institution">University of the Philippines - Open University</p>
+                        <p class="timeline-description">Relevant Coursework: Management Information Systems, Data Structures, Software Engineering, Database Systems</p>
+                        <p class="timeline-quote">Pamantasang Bukas para sa Magandang Bukas</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="assets/images/logos/AdDU.png" alt="Ateneo de Davao University Logo">
+                        <div class="timeline-logo-placeholder"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Bachelor's Degree in Electronics Engineering</h3>
+                        <p class="timeline-date">2015 - 2021</p>
+                        <p class="timeline-institution">Ateneo de Davao University</p>
+                        <p class="timeline-description">Program Outcomes: Function on multidisciplinary teams, Identify, formulate, and solve engineering problems, Identify the impact of engineering solutions in a global, economic, environmental, and societal context</p>
+                        <p class="timeline-quote">Ad Majorem Dei Gloriam</p>
+                    </div>
+                </div>
+                <!--
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                         Replace with online learning platform logos 
+                        <div class="timeline-logo-placeholder">📚</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Online Courses & Specializations</h3>
+                        <p class="timeline-date">Ongoing</p>
+                        <p class="timeline-institution">Various Platforms</p>
+                        <p class="timeline-description">Machine Learning Specialization, Full-Stack Web Development, Cybersecurity Fundamentals</p>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <div class="timeline-logo-placeholder">LSI</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Software Quality Assurance Tester</h3>
+                        <p class="timeline-date">2023 - Present</p>
+                        <p class="timeline-institution">Lane Systems, Inc.</p>
+                        <p class="timeline-description">Performed Manual Testing across multiple testing objectives, including Performance, Functional, Non-Functional, Black-Box, and Regression Testing, ensuring software stability and user accessibility.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <div class="timeline-logo-placeholder">PPPI</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Systems Developer</h3>
+                        <p class="timeline-date">2022 - 2023</p>
+                        <p class="timeline-institution">Phoenix Petroleum Philippines, Inc.</p>
+                        <p class="timeline-description">Immersed in different Job Roles such as: Quality Assurance Tester | Application Support | IT Level 2 Support | Database Management | Information Security | Project Management | Basic Data Engineering.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <div class="timeline-logo-placeholder">ADI</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Auxiliary Building Design Intern</h3>
+                        <p class="timeline-date">2020</p>
+                        <p class="timeline-institution">Amplify Inc.</p>
+                        <p class="timeline-description">Auxiliary Building Design and Costing on CCTV using AutoCAD and Microsoft Excel</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact Info</h2>
-        <p>Email: example@school.com</p>
-        <p>Social Media: <a href="https://facebook.com">Facebook</a> | <a href="https://x.com">Twitter</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 2023-30106. All rights reserved.</p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">HTML</span>
+                    </div>
+                </div>
+                <!--
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">jQuery</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MSSQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:jtflaguitao@gmail.com">jtflaguitao@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/jon-thaddeus-laguitao-6638a3228/" target="_blank" rel="noopener noreferrer">Connect with me</a>
+                </div>
+                <!--
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/yourusername" target=" rel="noopener noreferrer">View my repositories</a>
+                </div>
+                <div class="contact-item">
+                    <h3>Phone</h3>
+                    <a href="tel:+1234567890">+1 (234) 567-890</a>
+                </div>
+                -->
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025. All rights reserved. Kapag may alitaptap, tumingin sa mga ulap.</p>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
