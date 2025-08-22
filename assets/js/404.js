@@ -6,29 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     initProgressBar();
     initKeyboardNavigation();
     initAccessibilityFeatures();
-    initCursorEffect();
+    initPageAnimations();
 });
-
-/**
- * Go back function
- */
-function goBack() {
-    if (window.history.length > 1) {
-        window.history.back();
-    } else {
-        window.location.href = '/';
-    }
-}
 
 /**
  * Interactive Elements
  */
 function initInteractiveElements() {
-    // Construction icon click effect
-    const constructionIcon = document.querySelector('.construction-icon');
+    // Coming soon icon click effect
+    const comingSoonIcon = document.querySelector('.coming-soon-icon');
     
-    if (constructionIcon) {
-        constructionIcon.addEventListener('click', function() {
+    if (comingSoonIcon) {
+        comingSoonIcon.addEventListener('click', function() {
             // Reset animation
             this.style.animation = 'none';
             
@@ -38,37 +27,42 @@ function initInteractiveElements() {
             setTimeout(() => {
                 this.style.animation = 'bounce 3s ease-in-out infinite';
                 this.style.transform = '';
-            }, 100);
+            }, 150);
             
-            // Add some fun effects
-            createSparkles(this);
+            // Create rocket trail effect
+            createRocketTrail(this);
         });
 
-        // Add hover effect for better feedback
-        constructionIcon.addEventListener('mouseenter', function() {
-            this.style.filter = 'brightness(1.1)';
+        // Enhanced hover effect
+        comingSoonIcon.addEventListener('mouseenter', function() {
+            this.style.filter = 'brightness(1.1) drop-shadow(0 0 20px rgba(74, 144, 226, 0.3))';
         });
 
-        constructionIcon.addEventListener('mouseleave', function() {
+        comingSoonIcon.addEventListener('mouseleave', function() {
             this.style.filter = '';
         });
     }
 
-    // CTA button effects
+    // CTA button effects with professional animations
     document.querySelectorAll('.cta-button').forEach(button => {
         button.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-3px) scale(1.02)';
+            this.style.transform = 'translateY(-2px) scale(1.02)';
         });
 
         button.addEventListener('mouseleave', function() {
             this.style.transform = '';
         });
+
+        // Add click ripple effect
+        button.addEventListener('click', function(e) {
+            createRippleEffect(this, e);
+        });
     });
 
-    // Social links hover effects
+    // Social links with smooth animations
     document.querySelectorAll('.social-link').forEach(link => {
         link.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.2) rotate(10deg)';
+            this.style.transform = 'scale(1.1) rotate(5deg)';
         });
 
         link.addEventListener('mouseleave', function() {
@@ -82,14 +76,25 @@ function initInteractiveElements() {
  */
 function initProgressBar() {
     const progressFill = document.querySelector('.progress-fill');
+    const progressText = document.querySelector('.progress-text');
     
-    if (!progressFill) return;
+    if (!progressFill || !progressText) return;
 
     let progress = 0;
-    const targetProgress = 85;
-    const increment = 0.5;
-    
-    // Animate progress bar on load
+    const targetProgress = 88; // Professional completion percentage
+    const increment = 0.3;
+    const messages = [
+        'Initializing...',
+        'Loading assets...',
+        'Compiling code...',
+        'Testing features...',
+        'Optimizing performance...',
+        'Final touches...',
+        'Almost ready!',
+        'Getting awesome!'
+    ];
+
+    // Animate progress bar with realistic loading
     const progressInterval = setInterval(() => {
         progress += Math.random() * increment + 0.2;
         
@@ -97,62 +102,68 @@ function initProgressBar() {
             progress = targetProgress;
             clearInterval(progressInterval);
             
-            // Add completion effect
+            // Completion effects
             setTimeout(() => {
-                progressFill.style.boxShadow = '0 0 20px rgba(132, 204, 22, 0.5)';
+                progressFill.style.boxShadow = '0 0 15px rgba(0, 63, 127, 0.5)';
+                progressText.textContent = 'Something awesome is loading!';
+                progressText.style.color = 'var(--ateneo-blue)';
+                progressText.style.fontWeight = '700';
             }, 500);
         }
         
         progressFill.style.width = progress + '%';
         
-        // Update progress text if it exists
-        const progressText = document.querySelector('.progress-text');
-        if (progressText) {
-            progressText.textContent = Math.round(progress) + '%';
+        // Update progress text with dynamic messages
+        const messageIndex = Math.floor((progress / targetProgress) * messages.length);
+        if (messages[messageIndex]) {
+            progressText.textContent = messages[Math.min(messageIndex, messages.length - 1)];
         }
-    }, 50);
+    }, 80);
 
-    // Add periodic pulse effect
+    // Add periodic pulse effect when complete
     setInterval(() => {
         if (progress >= targetProgress) {
-            progressFill.style.animation = 'pulse 0.5s ease-in-out';
+            progressFill.style.animation = 'pulse 0.8s ease-in-out';
             setTimeout(() => {
                 progressFill.style.animation = '';
-            }, 500);
+            }, 800);
         }
-    }, 3000);
+    }, 4000);
 }
 
 /**
- * Create Sparkle Effect
+ * Create Rocket Trail Effect
  */
-function createSparkles(element) {
-    const sparkleCount = 8;
+function createRocketTrail(element) {
+    const trailCount = 12;
     const rect = element.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
     
-    for (let i = 0; i < sparkleCount; i++) {
-        const sparkle = document.createElement('div');
-        sparkle.className = 'sparkle';
-        sparkle.style.cssText = `
+    for (let i = 0; i < trailCount; i++) {
+        const trail = document.createElement('div');
+        trail.className = 'rocket-trail';
+        trail.style.cssText = `
             position: fixed;
-            width: 4px;
-            height: 4px;
-            background: linear-gradient(45deg, #fbbf24, #fb7185);
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(45deg, var(--ateneo-light-blue), var(--accent-cyan));
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
-            left: ${rect.left + rect.width / 2}px;
-            top: ${rect.top + rect.height / 2}px;
+            left: ${centerX - 4}px;
+            top: ${centerY - 4}px;
+            box-shadow: 0 0 8px var(--ateneo-light-blue);
         `;
         
-        document.body.appendChild(sparkle);
+        document.body.appendChild(trail);
         
-        // Animate sparkle
-        const angle = (i * 360 / sparkleCount) * (Math.PI / 180);
-        const distance = 50 + Math.random() * 30;
-        const duration = 800 + Math.random() * 400;
+        // Animate trail particles
+        const angle = (i * 30) * (Math.PI / 180);
+        const distance = 60 + Math.random() * 40;
+        const duration = 1000 + Math.random() * 500;
         
-        sparkle.animate([
+        trail.animate([
             {
                 transform: 'translate(0, 0) scale(1)',
                 opacity: 1
@@ -165,9 +176,60 @@ function createSparkles(element) {
             duration: duration,
             easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
         }).addEventListener('finish', () => {
-            sparkle.remove();
+            trail.remove();
         });
     }
+}
+
+/**
+ * Create Ripple Effect
+ */
+function createRippleEffect(button, event) {
+    const rect = button.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = event.clientX - rect.left - size / 2;
+    const y = event.clientY - rect.top - size / 2;
+    
+    const ripple = document.createElement('span');
+    ripple.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        left: ${x}px;
+        top: ${y}px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: ripple 0.6s ease-out;
+    `;
+    
+    // Add ripple keyframes if not already present
+    if (!document.querySelector('#ripple-styles')) {
+        const style = document.createElement('style');
+        style.id = 'ripple-styles';
+        style.textContent = `
+            @keyframes ripple {
+                from {
+                    transform: scale(0);
+                    opacity: 1;
+                }
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    button.style.position = 'relative';
+    button.appendChild(ripple);
+    
+    setTimeout(() => {
+        if (ripple.parentNode) {
+            ripple.parentNode.removeChild(ripple);
+        }
+    }, 600);
 }
 
 /**
@@ -175,17 +237,17 @@ function createSparkles(element) {
  */
 function initKeyboardNavigation() {
     document.addEventListener('keydown', function(e) {
-        const constructionIcon = document.querySelector('.construction-icon');
+        const comingSoonIcon = document.querySelector('.coming-soon-icon');
         
-        // Enter or Space to activate construction icon
-        if ((e.key === 'Enter' || e.key === ' ') && document.activeElement === constructionIcon) {
+        // Enter or Space to activate coming soon icon
+        if ((e.key === 'Enter' || e.key === ' ') && document.activeElement === comingSoonIcon) {
             e.preventDefault();
-            constructionIcon.click();
+            comingSoonIcon.click();
         }
         
-        // Escape to go back
+        // Escape to go back to portfolio
         if (e.key === 'Escape') {
-            goBack();
+            window.location.href = '/';
         }
         
         // Add keyboard navigation class for focus visibility
@@ -197,57 +259,63 @@ function initKeyboardNavigation() {
     document.addEventListener('mousedown', () => {
         document.body.classList.remove('keyboard-navigation');
     });
+
+    // Enhanced focus styles for keyboard navigation
+    const focusStyle = document.createElement('style');
+    focusStyle.textContent = `
+        .keyboard-navigation .coming-soon-icon:focus,
+        .keyboard-navigation .cta-button:focus,
+        .keyboard-navigation .social-link:focus,
+        .keyboard-navigation .nav-link:focus {
+            outline: 3px solid var(--ateneo-light-blue);
+            outline-offset: 3px;
+        }
+        
+        .keyboard-navigation .coming-soon-icon:focus {
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+        }
+    `;
+    document.head.appendChild(focusStyle);
 }
 
 /**
- * Cursor Effect
+ * Page Animations
  */
-function initCursorEffect() {
-    let cursor = null;
-    
-    document.addEventListener('mousemove', function(e) {
-        if (!cursor) {
-            cursor = document.createElement('div');
-            cursor.className = 'custom-cursor';
-            cursor.style.cssText = `
-                position: fixed;
-                width: 20px;
-                height: 20px;
-                background: radial-gradient(circle, rgba(64, 224, 208, 0.3), rgba(64, 224, 208, 0.1));
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 9999;
-                transition: transform 0.1s ease;
-                mix-blend-mode: screen;
-            `;
-            document.body.appendChild(cursor);
-        }
-        
-        cursor.style.left = e.clientX - 10 + 'px';
-        cursor.style.top = e.clientY - 10 + 'px';
-        
-        // Scale cursor based on hover state
-        const hoveredElement = document.elementFromPoint(e.clientX, e.clientY);
-        if (hoveredElement && (hoveredElement.classList.contains('cta-button') || 
-            hoveredElement.classList.contains('social-link') || 
-            hoveredElement.classList.contains('construction-icon'))) {
-            cursor.style.transform = 'scale(2)';
-        } else {
-            cursor.style.transform = 'scale(1)';
+function initPageAnimations() {
+    // Animate elements on page load
+    const animateElements = [
+        { selector: '.container', delay: 100 },
+        { selector: '.coming-soon-icon', delay: 300 },
+        { selector: '.main-title', delay: 500 },
+        { selector: '.subtitle', delay: 700 },
+        { selector: '.description', delay: 900 },
+        { selector: '.progress-container', delay: 1100 },
+        { selector: '.cta-container', delay: 1300 },
+        { selector: '.social-container', delay: 1500 }
+    ];
+
+    animateElements.forEach(({ selector, delay }) => {
+        const element = document.querySelector(selector);
+        if (element) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'all 0.6s ease';
+            
+            setTimeout(() => {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, delay);
         }
     });
 
-    // Hide cursor when leaving window
-    document.addEventListener('mouseleave', () => {
-        if (cursor) {
-            cursor.style.opacity = '0';
-        }
-    });
-
-    document.addEventListener('mouseenter', () => {
-        if (cursor) {
-            cursor.style.opacity = '1';
-        }
+    // Animate background shapes with staggered timing
+    const shapes = document.querySelectorAll('.shape');
+    shapes.forEach((shape, index) => {
+        shape.style.opacity = '0';
+        setTimeout(() => {
+            shape.style.transition = 'opacity 1s ease';
+            shape.style.opacity = '0.1';
+        }, 200 + (index * 150));
     });
 }
 
@@ -255,23 +323,7 @@ function initCursorEffect() {
  * Accessibility Features
  */
 function initAccessibilityFeatures() {
-    // Add focus styles for keyboard navigation
-    const focusStyle = document.createElement('style');
-    focusStyle.textContent = `
-        .keyboard-navigation .construction-icon:focus,
-        .keyboard-navigation .cta-button:focus,
-        .keyboard-navigation .social-link:focus {
-            outline: 3px solid rgba(255, 255, 255, 0.8);
-            outline-offset: 3px;
-        }
-        
-        .construction-icon:focus {
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
-        }
-    `;
-    document.head.appendChild(focusStyle);
-
-    // Announce page load to screen readers
+    // Screen reader announcements
     const announcer = document.createElement('div');
     announcer.setAttribute('aria-live', 'polite');
     announcer.setAttribute('aria-atomic', 'true');
@@ -291,17 +343,22 @@ function initAccessibilityFeatures() {
 
     // Announce when page is ready
     setTimeout(() => {
-        announcer.textContent = 'Coming Soon page loaded. Press Tab to navigate or Escape to go back.';
-    }, 1000);
+        announcer.textContent = 'Coming soon page loaded. Something awesome is being built. Press Tab to navigate or Escape to return to portfolio.';
+    }, 2000);
 
     // Update progress announcements
     const progressFill = document.querySelector('.progress-fill');
-    if (progressFill) {
+    const progressText = document.querySelector('.progress-text');
+    
+    if (progressFill && progressText) {
         let lastAnnouncedProgress = 0;
+        
         const progressObserver = new MutationObserver(() => {
             const currentWidth = parseInt(progressFill.style.width);
-            if (currentWidth > lastAnnouncedProgress + 20) {
-                announcer.textContent = `Loading progress: ${currentWidth} percent`;
+            const currentText = progressText.textContent;
+            
+            if (currentWidth > lastAnnouncedProgress + 25) {
+                announcer.textContent = `Development progress: ${currentWidth} percent. ${currentText}`;
                 lastAnnouncedProgress = currentWidth;
             }
         });
@@ -310,159 +367,243 @@ function initAccessibilityFeatures() {
             attributes: true,
             attributeFilter: ['style']
         });
+        
+        progressObserver.observe(progressText, {
+            childList: true,
+            characterData: true
+        });
+    }
+
+    // Add high contrast mode detection
+    if (window.matchMedia('(prefers-contrast: high)').matches) {
+        document.body.classList.add('high-contrast');
+    }
+
+    // Add reduced motion detection
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.body.classList.add('reduced-motion');
+        
+        // Disable complex animations
+        const style = document.createElement('style');
+        style.textContent = `
+            .reduced-motion * {
+                animation-duration: 0.1s !important;
+                transition-duration: 0.1s !important;
+            }
+        `;
+        document.head.appendChild(style);
     }
 }
 
 /**
- * Email Notification Feature
+ * Email Notification Handler
  */
 function initEmailNotification() {
-    const notifyButton = document.querySelector('.primary-button[href^="mailto:"]');
+    const emailButton = document.querySelector('.primary-button[href^="mailto:"]');
     
-    if (notifyButton) {
-        notifyButton.addEventListener('click', function(e) {
-            // If email client doesn't open, show alternative
+    if (emailButton) {
+        emailButton.addEventListener('click', function(e) {
+            // Add visual feedback
+            this.style.transform = 'scale(0.98)';
             setTimeout(() => {
-                const modal = createNotificationModal();
-                document.body.appendChild(modal);
-            }, 1000);
+                this.style.transform = '';
+            }, 150);
+            
+            // Show confirmation after attempting to open email client
+            setTimeout(() => {
+                showNotification('Email client opened! If it didn\'t open automatically, please email jtflaguitao@gmail.com', 'info');
+            }, 500);
         });
     }
 }
 
 /**
- * Create Notification Modal
+ * Show Notification
  */
-function createNotificationModal() {
-    const modal = document.createElement('div');
-    modal.className = 'notification-modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <h3>Stay Updated!</h3>
-            <p>Enter your email to get notified when we launch:</p>
-            <form class="email-form">
-                <input type="email" placeholder="your@email.com" required>
-                <button type="submit">Notify Me</button>
-            </form>
-            <button class="modal-close">&times;</button>
+function showNotification(message, type = 'info') {
+    // Remove any existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-icon">${type === 'info' ? 'ℹ️' : '✅'}</span>
+            <span class="notification-text">${message}</span>
+            <button class="notification-close" aria-label="Close notification">&times;</button>
         </div>
-        <div class="modal-backdrop"></div>
     `;
     
-    modal.style.cssText = `
+    notification.style.cssText = `
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        top: 100px;
+        right: 20px;
+        background: ${type === 'info' ? 'var(--ateneo-blue)' : 'var(--lime-green)'};
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        transform: translateX(400px);
+        transition: transform 0.3s ease;
+        max-width: 350px;
     `;
     
-    // Add modal styles
-    const modalStyle = document.createElement('style');
-    modalStyle.textContent = `
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            color: var(--dark-gray);
-            text-align: center;
-            position: relative;
-            z-index: 10001;
-            max-width: 400px;
-            width: 90%;
+    // Add notification styles
+    const notificationStyle = document.createElement('style');
+    notificationStyle.textContent = `
+        .notification-content {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem 1.2rem;
         }
         
-        .modal-backdrop {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px);
+        .notification-text {
+            flex: 1;
+            font-size: 0.9rem;
+            line-height: 1.4;
         }
         
-        .email-form {
-            margin: 1rem 0;
-        }
-        
-        .email-form input {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid var(--medium-gray);
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
-        
-        .email-form button {
-            background: var(--ateneo-blue);
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
+        .notification-close {
             background: none;
             border: none;
-            font-size: 1.5rem;
+            color: white;
+            font-size: 1.2rem;
             cursor: pointer;
+            padding: 0;
+            margin-left: 0.5rem;
+            opacity: 0.8;
+            transition: opacity 0.2s ease;
+        }
+        
+        .notification-close:hover {
+            opacity: 1;
         }
     `;
-    document.head.appendChild(modalStyle);
+    document.head.appendChild(notificationStyle);
     
-    // Add event listeners
-    modal.querySelector('.modal-close').addEventListener('click', () => {
-        modal.remove();
-        modalStyle.remove();
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Close functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        notification.style.transform = 'translateX(400px)';
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+            if (notificationStyle.parentNode) {
+                notificationStyle.parentNode.removeChild(notificationStyle);
+            }
+        }, 300);
     });
     
-    modal.querySelector('.modal-backdrop').addEventListener('click', () => {
-        modal.remove();
-        modalStyle.remove();
-    });
-    
-    modal.querySelector('.email-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = modal.querySelector('input').value;
-        
-        // Simulate email signup
-        modal.querySelector('.modal-content').innerHTML = `
-            <h3>Thank You!</h3>
-            <p>We'll notify you at <strong>${email}</strong> when we launch!</p>
-            <button onclick="this.closest('.notification-modal').remove()">Close</button>
-        `;
-    });
-    
-    return modal;
+    // Auto-remove after 7 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.style.transform = 'translateX(400px)';
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.parentNode.removeChild(notification);
+                }
+                if (notificationStyle.parentNode) {
+                    notificationStyle.parentNode.removeChild(notificationStyle);
+                }
+            }, 300);
+        }
+    }, 7000);
 }
 
 /**
  * Performance Optimizations
  */
 function initPerformanceOptimizations() {
-    // Preload critical fonts
-    const fontPreload = document.createElement('link');
-    fontPreload.rel = 'preload';
-    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700;800&display=swap';
-    fontPreload.as = 'style';
-    document.head.appendChild(fontPreload);
+    // Preload critical resources
+    const preloadLinks = [
+        { href: 'assets/css/coming-soon.css', as: 'style' }
+    ];
+    
+    preloadLinks.forEach(({ href, as }) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = href;
+        link.as = as;
+        document.head.appendChild(link);
+    });
 
-    // Optimize animations for performance
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.body.classList.add('reduced-motion');
+    // Optimize animations based on device capabilities
+    const reduceAnimations = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+                            /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (reduceAnimations) {
+        document.body.classList.add('reduced-animations');
+    }
+
+    // Connection-aware loading
+    if ('connection' in navigator) {
+        const connection = navigator.connection;
+        if (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g') {
+            document.body.classList.add('slow-connection');
+            // Reduce animation complexity for slow connections
+            const slowConnectionStyle = document.createElement('style');
+            slowConnectionStyle.textContent = `
+                .slow-connection .shape {
+                    animation: none !important;
+                }
+                .slow-connection .coming-soon-icon::after {
+                    animation: none !important;
+                }
+            `;
+            document.head.appendChild(slowConnectionStyle);
+        }
     }
 }
 
-// Initialize optional features
-// Uncomment to enable
-// initEmailNotification();
-initPerformanceOptimizations();
+/**
+ * Error Handling
+ */
+function initErrorHandling() {
+    window.addEventListener('error', function(e) {
+        console.error('Coming Soon Page Error:', e.error);
+        
+        // Graceful degradation - ensure basic functionality works
+        const essentialElements = ['.container', '.main-title', '.cta-container'];
+        essentialElements.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element && element.style.opacity === '0') {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    });
+
+    // Handle unhandled promise rejections
+    window.addEventListener('unhandledrejection', function(e) {
+        console.error('Unhandled promise rejection:', e.reason);
+    });
+}
+
+/**
+ * Initialize all features
+ */
+function initializeAllFeatures() {
+    try {
+        initEmailNotification();
+        initPerformanceOptimizations();
+        initErrorHandling();
+    } catch (error) {
+        console.error('Error initializing additional features:', error);
+        // Continue with basic functionality even if some features fail
+    }
+}
+
+// Initialize additional features
+initializeAllFeatures();

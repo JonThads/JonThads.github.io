@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Coming Soon - This page is currently under construction">
-    <title>Coming Soon - Building Something Amazing</title>
+    <meta name="description" content="Something awesome is coming up - Jon Thaddeus Laguitao Portfolio">
+    <title>404</title>
     <link rel="stylesheet" href="assets/css/404.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Background geometric shapes -->
     <div class="bg-shapes">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
@@ -15,54 +18,56 @@
         <div class="shape shape-4"></div>
         <div class="shape shape-5"></div>
         <div class="shape shape-6"></div>
-        <div class="shape shape-7"></div>
     </div>
 
-    <div class="container">
-        <div class="icon-container">
-            <div class="construction-icon" tabindex="0" role="button" aria-label="Construction in progress"></div>
+    <!-- Header matching your portfolio -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="/" class="logo" aria-label="Jon Thaddeus Laguitao - Portfolio Home">Jon Thaddeus Laguitao</a>
+            <nav role="navigation" aria-label="Main navigation">
+                <a href="index.html" class="nav-link">← Back to Portfolio</a>
+            </nav>
         </div>
+    </header>
 
-        <h1 class="main-title">Coming Soon</h1>
-        <h2 class="subtitle">Building Something Amazing</h2>
-        <p class="description">
-            We're crafting an exceptional digital experience just for you. Our team is working hard to bring you something incredible. Stay tuned for the big reveal!
-        </p>
+    <main id="main-content" role="main">
+        <div class="container">
+            <!-- Animated icon -->
+            <div class="icon-container">
+                <div class="coming-soon-icon" tabindex="0" role="button" aria-label="Development in progress">
+                    <div class="icon-inner">
+                        <span class="icon-emoji">🚀</span>
+                    </div>
+                </div>
+            </div>
 
-        <div class="progress-container">
-            <div class="progress-label">Progress</div>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
+            <h1 class="main-title">Something Awesome is Coming Up</h1>
+            <h2 class="subtitle">Building the Future, One Line at a Time</h2>
+            <p class="description">
+                I'm crafting something extraordinary that will showcase innovation and excellence. Stay tuned for the big reveal!
+            </p>
+
+            <!-- Progress section -->
+            <div class="progress-container">
+                <div class="progress-label">Development Progress</div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Loading...</div>
+            </div>
+
+            <!-- Call to action buttons -->
+            <div class="cta-container">
+                <a href="/" class="cta-button secondary-button">
+                    ← Back to Portfolio
+                </a>
             </div>
         </div>
+    </main>
 
-        <div class="cta-container">
-            <a href="mailto:your.email@example.com" class="cta-button primary-button">
-                📧 Get Notified
-            </a>
-            <a href="#" class="cta-button secondary-button" onclick="goBack()">
-                ← Go Back
-            </a>
-        </div>
-
-        <div class="social-container">
-            <p class="social-label">Follow our journey</p>
-            <div class="social-links">
-                <a href="https://github.com/yourusername" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                    💻
-                </a>
-                <a href="https://linkedin.com/in/yourprofile" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    💼
-                </a>
-                <a href="https://twitter.com/yourusername" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                    🐦
-                </a>
-                <a href="mailto:your.email@example.com" class="social-link" aria-label="Email">
-                    📧
-                </a>
-            </div>
-        </div>
-    </div>
+    <footer role="contentinfo">
+        <p>&copy; 2025. All rights reserved. Kapag may alitaptap, tumingin sa mga ulap.</p>
+    </footer>
 
     <script src="assets/js/404.js"></script>
 </body>
