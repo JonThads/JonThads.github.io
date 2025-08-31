@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects Showcase Main Page highlighting all projects with filtering and search functionality.">
+    <title>Projects</title>
+    <link rel="stylesheet" href="assets/css/projects.css">
+</head>
+<body>
+    <!-- Header -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Go to homepage">Jon Thaddeus Laguitao</a>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" aria-current="page">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs">
+        <div class="breadcrumb-container">
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-separator" aria-hidden="true">›</span>
+                <span aria-current="page">Projects</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main">
+        <div class="container">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1 class="page-title">My Projects</h1>
+                <p class="page-subtitle">Explore my technical projects showcasing skills in software development, testing, and problem-solving</p>
+            </section>
+
+            <!-- Filter Section -->
+            <section class="filter-section" role="search" aria-label="Project filters">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    placeholder="Search projects..." 
+                    id="searchInput"
+                    aria-label="Search projects by title or description"
+                >
+                <div class="filter-buttons" role="group" aria-label="Filter projects by technology">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+                    <button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button>
+                    <button class="filter-btn" data-filter="web" aria-pressed="false">Web Development</button>
+                    <button class="filter-btn" data-filter="testing" aria-pressed="false">Testing</button>
+                    <button class="filter-btn" data-filter="api" aria-pressed="false">API</button>
+                    <button class="filter-btn" data-filter="database" aria-pressed="false">Database</button>
+                </div>
+            </section>
+
+            <!-- Projects Grid -->
+            <section class="projects-grid" id="projectsGrid" aria-label="Project showcase">
+                <!-- Postman API Testing Project -->
+                <article class="project-card" 
+                         data-tags="api testing postman" 
+                         onclick="navigateToProject('postman-basic-api-testing')"
+                         tabindex="0"
+                         role="button"
+                         aria-label="View Postman API Testing Framework project details">
+                    <div class="project-image">
+                        <div class="project-placeholder">🔧</div>
+                        <span class="status-badge status-completed">Completed</span>
+                    </div>
+                    <div class="project-content">
+                        <h2 class="project-title">Postman API Testing Framework</h2>
+                        <p class="project-summary">Comprehensive API Testing Suite using Postman.</p>
+                        <div class="tech-tags" aria-label="Technologies used">
+                            <span class="tech-tag">Postman</span>
+                            <span class="tech-tag">API Testing</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;" aria-live="polite">
+                <div class="no-results-icon">🔍</div>
+                <h3>No projects found</h3>
+                <p>Try adjusting your search terms or filters</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/projects.js"></script>
+</body>
+</html>
