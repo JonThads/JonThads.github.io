@@ -68,6 +68,10 @@ Open Source Community for tools and inspiration
 -----------------------------------------------------------------------------------------------
 📝 Changelog
 
+v1.3.2
+[HOTFIX] Project Details CSS Fix
+[DOCS] License and Notice Addition
+
 v1.3.1
 Project Showcase and Details
 
