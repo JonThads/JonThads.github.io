@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function showImage(index) {
     if (index < 0 || index >= images.length) return;
     currentImageIndex = index;
-    imgEl.src = images[index].src;        // <<-- set the image source
+    imgEl.src = images[index].src;
     imgEl.alt = images[index].alt;
     dotsContainer.querySelectorAll('.gallery-dot').forEach((dot, i) => {
       const active = i === index;
@@ -54,4 +54,50 @@ document.addEventListener('DOMContentLoaded', () => {
   // Auto-advance (optional)
   const interval = setInterval(() => showImage((currentImageIndex + 1) % images.length), 5000);
   container?.addEventListener('mouseenter', () => clearInterval(interval));
+
+  // HAMBURGER MENU FUNCTIONALITY
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (hamburger && nav) {
+      console.log('Hamburger menu elements found, adding event listener');
+      hamburger.addEventListener('click', function(e) {
+          console.log('Hamburger clicked!');
+          e.preventDefault();
+          
+          hamburger.classList.toggle('active');
+          nav.classList.toggle('active');
+          
+          // Update aria-expanded attribute
+          const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', !isExpanded);
+          
+          console.log('Hamburger active:', hamburger.classList.contains('active'));
+          console.log('Nav active:', nav.classList.contains('active'));
+      });
+  } else {
+      console.error('Hamburger or nav element not found');
+      console.log('Hamburger:', hamburger);
+      console.log('Nav:', nav);
+  }
 });
+
+// Keep the original function for backward compatibility
+function toggleMenu() {
+  console.log('toggleMenu called');
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  if (hamburger && nav) {
+      hamburger.classList.toggle('active');
+      nav.classList.toggle('active');
+      
+      // Update aria-expanded attribute
+      const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !isExpanded);
+      
+      console.log('toggleMenu executed');
+  } else {
+      console.error('toggleMenu: Elements not found');
+  }
+}

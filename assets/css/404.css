@@ -1,6 +1,6 @@
 :root {
-    --ateneo-blue: #003f7f;
-    --ateneo-light-blue: #4a90e2;
+    --professional-blue: #003f7f;
+    --professional-light-blue: #4a90e2;
     --light-blue: #87ceeb;
     --accent-cyan: #40e0d0;
     --vibrant-orange: #ff6b35;
@@ -33,7 +33,7 @@ body {
     position: absolute;
     top: -40px;
     left: 6px;
-    background: var(--ateneo-blue);
+    background: var(--professional-blue);
     color: white;
     padding: 8px;
     text-decoration: none;
@@ -47,7 +47,7 @@ body {
 
 /* Header - matching your portfolio style */
 header {
-    background: linear-gradient(135deg, var(--ateneo-blue), var(--ateneo-light-blue));
+    background: linear-gradient(135deg, var(--professional-blue), var(--professional-light-blue));
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -139,7 +139,7 @@ header {
     right: 5%;
     width: 120px;
     height: 120px;
-    background: linear-gradient(45deg, var(--ateneo-blue), var(--electric-purple));
+    background: linear-gradient(45deg, var(--professional-blue), var(--electric-purple));
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     animation: pulse 4s ease-in-out infinite;
 }
@@ -149,7 +149,7 @@ header {
     right: 30%;
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, var(--accent-cyan), var(--ateneo-light-blue));
+    background: linear-gradient(135deg, var(--accent-cyan), var(--professional-light-blue));
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     animation: wiggle 5s ease-in-out infinite;
 }
@@ -194,7 +194,7 @@ main {
 .coming-soon-icon {
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, var(--ateneo-blue), var(--ateneo-light-blue));
+    background: linear-gradient(135deg, var(--professional-blue), var(--professional-light-blue));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -209,7 +209,7 @@ main {
 
 .coming-soon-icon:hover, .coming-soon-icon:focus {
     transform: scale(1.05);
-    outline: 3px solid var(--ateneo-light-blue);
+    outline: 3px solid var(--professional-light-blue);
     outline-offset: 5px;
 }
 
@@ -239,14 +239,14 @@ main {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--ateneo-blue);
+    color: var(--professional-blue);
     /* Removed gradient text for better contrast */
 }
 
 .subtitle {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
-    color: var(--ateneo-blue); /* Improved contrast */
+    color: var(--professional-blue); /* Improved contrast */
     font-weight: 500;
 }
 
@@ -267,7 +267,7 @@ main {
 
 .progress-label {
     font-size: 0.9rem;
-    color: var(--ateneo-blue);
+    color: var(--professional-blue);
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -286,7 +286,7 @@ main {
 
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--ateneo-blue), var(--ateneo-light-blue), var(--accent-cyan));
+    background: linear-gradient(90deg, var(--professional-blue), var(--professional-light-blue), var(--accent-cyan));
     border-radius: 10px;
     width: 0%;
     animation: loading 4s ease-in-out infinite;
@@ -306,17 +306,17 @@ main {
 
 /* Enhanced focus styles for WCAG compliance */
 .coming-soon-icon:focus {
-    outline: 3px solid var(--ateneo-blue);
+    outline: 3px solid var(--professional-blue);
     outline-offset: 3px;
 }
 
 .cta-button:focus {
-    outline: 3px solid var(--ateneo-blue);
+    outline: 3px solid var(--professional-blue);
     outline-offset: 2px;
 }
 
 .social-link:focus {
-    outline: 3px solid var(--ateneo-blue);
+    outline: 3px solid var(--professional-blue);
     outline-offset: 2px;
 }
 
@@ -328,7 +328,7 @@ main {
 /* Ensure sufficient color contrast */
 .progress-text {
     font-size: 0.9rem;
-    color: var(--ateneo-blue); /* Better contrast than light blue */
+    color: var(--professional-blue); /* Better contrast than light blue */
     font-weight: 600;
 }
 
@@ -364,14 +364,14 @@ main {
 }
 
 .primary-button {
-    background: linear-gradient(135deg, var(--ateneo-blue), var(--ateneo-light-blue));
+    background: linear-gradient(135deg, var(--professional-blue), var(--professional-light-blue));
     color: white;
 }
 
 .secondary-button {
     background: transparent;
-    color: var(--ateneo-blue);
-    border: 2px solid var(--ateneo-blue);
+    color: var(--professional-blue);
+    border: 2px solid var(--professional-blue);
 }
 
 .cta-button:hover, .cta-button:focus {
@@ -381,7 +381,7 @@ main {
 }
 
 .secondary-button:hover, .secondary-button:focus {
-    background: var(--ateneo-blue);
+    background: var(--professional-blue);
     color: white;
 }
 
@@ -413,14 +413,14 @@ main {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: var(--ateneo-blue);
+    color: var(--professional-blue);
     font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
 .social-link:hover, .social-link:focus {
-    background: var(--ateneo-blue);
-    border-color: var(--ateneo-blue);
+    background: var(--professional-blue);
+    border-color: var(--professional-blue);
     color: white;
     transform: scale(1.1);
     outline: 2px solid transparent;
@@ -428,7 +428,7 @@ main {
 
 /* Footer */
 footer {
-    background: var(--ateneo-blue);
+    background: var(--professional-blue);
     color: white;
     text-align: center;
     padding: 2rem;
@@ -555,11 +555,11 @@ footer {
 /* High Contrast Mode Support */
 @media (prefers-contrast: high) {
     .container {
-        border: 2px solid var(--ateneo-blue);
+        border: 2px solid var(--professional-blue);
         background: var(--white);
     }
     
     .cta-button {
-        border: 2px solid var(--ateneo-blue);
+        border: 2px solid var(--professional-blue);
     }
 }
