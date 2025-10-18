@@ -1,17 +1,17 @@
-Jon Thaddeus Laguitao - Portfolio
+# Jon Thaddeus Laguitao - Portfolio
 ---
 Welcome to my professional portfolio repository! This showcases my journey as an IT Professional, Licensed Electronics Engineer, and passionate problem solver through interactive projects, technical documentation, and continuous learning initiatives.
 
-🌟 About Me
+## 🌟 About Me
 
 IT Professional, Licensed Electronics Engineer, Problem Solver
 I'm an enthusiastic IT professional with a broad foundation in computer science and technology, driven by continuous learning and tackling challenging technical problems. Currently expanding expertise in Automated Testing, Cybersecurity, and Data Science to stay at the forefront of the industry.
 
-🎯 Mission
+## 🎯 Mission
 
 To leverage technology to create impactful solutions that will shape the nation.
 
-🎓 Education
+## 🎓 Education
 
 	Postgraduate Diploma in Computer Science (2023 - 2025)
 	
@@ -24,7 +24,7 @@ To leverage technology to create impactful solutions that will shape the nation.
 	Ateneo de Davao University
 	Focus: Multidisciplinary teams, Engineering problem-solving, Global impact assessment
 
-💼 Professional Experience
+## 💼 Professional Experience
 
 	Software Quality Assurance Tester | Lane Systems, Inc. (2023 - Present)
 	
@@ -41,7 +41,7 @@ To leverage technology to create impactful solutions that will shape the nation.
 	
 	CCTV system design using AutoCAD and Microsoft Excel
 
-♿ Accessibility
+## ♿ Accessibility
 
 This portfolio adheres to WCAG Level A accessibility standards:
 
@@ -54,34 +54,16 @@ This portfolio adheres to WCAG Level A accessibility standards:
 	✅ Focus indicators
 	✅ ARIA labels and roles
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 	University of the Philippines - Open University for advanced computer science education
 	Ateneo de Davao University for foundational engineering principles
 	Lane Systems, Inc. for professional growth opportunities
 	Phoenix Petroleum Philippines, Inc. for diverse technical exposure
 	Open Source Community for tools and inspiration
-
-📝 Changelog
-
-	v1.3.2
-	[HOTFIX] Project Details CSS Fix
-	[DOCS] License and Notice Addition
-	
-	v1.3.1
-	Project Showcase and Details
-	
-	v1.3.0
-	Project Showcase and Details
-	
-	v1.2.0
-	Technical Skills Section update
-	
-	v1.1.0
-	Added 404 Page
 
 "Kapag may alitaptap, tumingin sa mga ulap."
