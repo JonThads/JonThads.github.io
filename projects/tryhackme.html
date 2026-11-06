@@ -1,119 +1,199 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TryHackMe Cybersecurity Lessons</title>
-    <meta name="description" content="Selenium and Pytest for Web Application Testing.">
-    <link rel="stylesheet" href="../assets/css/project-details.css">
-</head>
-<body>
-    <!-- Header -->
-    <a href="#main" class="skip-link">Skip to main content</a>
-    <header>
-        <div class="header-container">
-            <a href="../index.html" class="logo" aria-label="Go to homepage">Jon Thaddeus Laguitao</a>
-            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav role="navigation" aria-label="Main navigation">
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                </ul>
-            </nav>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="The personal portfolio of Jon Thaddeus Laguitao. Software testing, engineering, and continuous learning."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>TryHackMe | Jon Thaddeus Laguitao</title>
+    <script>
+      try {
+        const t = localStorage.getItem('theme');
+        document.documentElement.dataset.theme =
+          t === 'light' || t === 'dark'
+            ? t
+            : matchMedia('(prefers-color-scheme:dark)').matches
+              ? 'dark'
+              : 'light';
+      } catch (e) {
+        document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme:dark)').matches
+          ? 'dark'
+          : 'light';
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="../index.html" aria-label="Jon Thaddeus Laguitao, home"
+          ><span class="badge-pair" aria-hidden="true"
+            ><img
+              class="badge-light"
+              src="../assets/logos/jtl-light.svg"
+              width="605"
+              height="363"
+              alt="" /><img
+              class="badge-dark"
+              src="../assets/logos/jtl-dark.svg"
+              width="605"
+              height="363"
+              alt="" /></span
+          ><span>Jon Thaddeus Laguitao</span></a
+        >
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="../index.html#about">About</a><a href="../index.html#education">Education</a
+          ><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a
+          ><a href="../projects.html" aria-current="page">Projects</a
+          ><a href="../blog/index.html">Blog</a><a href="../index.html#contact">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+          <svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z" /></svg
+          ><svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+            /></svg
+          ><span>Dark mode</span></button
+        ><button
+          type="button"
+          class="menu-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          Menu
+        </button>
+      </div>
     </header>
-
-    <!-- Breadcrumbs -->
-    <section class="breadcrumbs">
-        <div class="breadcrumb-container">
-            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-                <a href="../index.html">Home</a>
-                <span class="breadcrumb-separator" aria-hidden="true">›</span>
-                <a href="../projects.html">Projects</a>
-                <span class="breadcrumb-separator" aria-hidden="true">›</span>
-                <span aria-current="page">TryHackme Cybersecurity Basics</span>
-            </nav>
+    <main id="main" tabindex="-1">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span
+          ><a href="../projects.html">Projects</a><span aria-hidden="true">/</span
+          ><span aria-current="page">TryHackMe</span>
+        </nav>
+        <section class="page-intro">
+          <p class="label">In progress</p>
+          <h1>TryHackMe</h1>
+          <p>Learning cybersecurity</p>
+          <div class="tags">
+            <span class="tag">Cybersecurity</span><span class="tag">Linux Basics</span
+            ><span class="tag">SOC</span><span class="tag">Incident Response</span>
+          </div>
+        </section>
+        <div class="detail-layout">
+          <div class="prose">
+            <h2>Project overview</h2>
+            <p>
+              This page displays my progress in Cybersecurity Concepts using the TryHackMe platform
+            </p>
+            <section class="gallery" aria-label="Project screenshots">
+              <h2>Project screenshots</h2>
+              <p class="muted">Screenshots retained from my original portfolio.</p>
+              <figure>
+                <a
+                  href="../assets/images/projects/tryhackme/profile.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open full screenshot: TryHackMe profile with completed rooms and achievements (new tab)"
+                  ><img
+                    src="../assets/images/projects/tryhackme/profile.png"
+                    alt="TryHackMe profile with completed rooms and achievements"
+                    loading="lazy"
+                /></a>
+                <figcaption>TryHackMe profile with completed rooms and achievements</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="../assets/images/projects/tryhackme/skills_matrix.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open full screenshot: TryHackMe skills matrix from the original portfolio (new tab)"
+                  ><img
+                    src="../assets/images/projects/tryhackme/skills_matrix.png"
+                    alt="TryHackMe skills matrix from the original portfolio"
+                    loading="lazy"
+                /></a>
+                <figcaption>TryHackMe skills matrix from the original portfolio</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href="../assets/images/projects/tryhackme/soc_lessons.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open full screenshot: TryHackMe SOC learning progress from the original portfolio (new tab)"
+                  ><img
+                    src="../assets/images/projects/tryhackme/soc_lessons.png"
+                    alt="TryHackMe SOC learning progress from the original portfolio"
+                    loading="lazy"
+                /></a>
+                <figcaption>TryHackMe SOC learning progress from the original portfolio</figcaption>
+              </figure>
+            </section>
+          </div>
+          <aside class="card detail-aside">
+            <p class="label">Technologies &amp; tools</p>
+            <h3>TryHackMe</h3>
+            <p>An online platform to learn Cybersecurity for free or through a subscription</p>
+          </aside>
         </div>
-    </section>
-
-    <!-- Main Content -->
-    <main id="main">
-        <div class="container">
-            <!-- Project Header -->
-            <section class="project-header">
-                <h1 class="project-title">TryHackme Cybersecurity Basics</h1>
-                <span class="status-badge status-progress">In Progress</span>
-                <div class="tech-tags-header" aria-label="Technologies used in this project">
-                    <span class="tech-tag">Cybersecurity</span>
-                    <span class="tech-tag">Linux Basics</span>
-                    <span class="tech-tag">Security Operations Center (SOC)</span>
-                    <span class="tech-tag">Incident Response</span>
-                </div>
-            </section>
-
-            <!-- Image Gallery -->
-            <section class="content-section image-gallery">
-                <h2 class="section-title">Project Screenshots</h2>
-                    <div class="gallery-container" aria-roledescription="carousel">
-                        <button class="gallery-prev" aria-label="Previous image">&#9664;</button>
-
-                        <!-- Single img element that JS updates -->
-                        <img class="gallery-image" src="" alt="Project screenshot" loading="lazy" />
-
-                        <button class="gallery-next" aria-label="Next image">&#9654;</button>
-
-                        <!-- JS will fill this with dots -->
-                        <div class="gallery-dots" role="tablist" aria-label="Image controls"></div>
-                    </div>
-            </section>
-
-            <!-- Project Description -->
-            <section class="content-section">
-                <h2 class="section-title">Project Overview</h2>
-                <div class="section-content">
-                    <p>This page displays my progress in Cybersecurity Concepts using the TryHackMe platform</p>
-                </div>
-            </section>
-
-            <!-- Technologies Used -->
-            <section class="content-section">
-                <h2 class="section-title">Technologies & Tools</h2>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <div class="tech-name">TryHackMe</div>
-                        <div class="tech-description">An online platform to learn Cybersecurity for free or through a subscription</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Key Features -->
-            <section class="content-section">
-                <h2 class="section-title">Key Features</h2>
-            </section>
-
-            <!-- Challenges & Solutions -->
-            <section class="content-section">
-                <h2 class="section-title">Challenges & Solutions</h2>
-                <div class="section-content">
-                </div>
-            </section>
-
-            <!-- Project Navigation -->
-            <section class="project-navigation">
-                <a href="../projects.html" class="nav-button secondary" aria-label="Go back to all projects">
-                    ← Back to Projects
-                </a>
-                <a href="../404.html" class="nav-button" aria-label="In Development">
-                    Next Project →
-                </a>
-            </section>
+        <div class="article-footer actions">
+          <a class="button" href="../projects.html">← All projects</a
+          ><a class="button primary" href="postman-basic-api-testing.html">Next project →</a>
         </div>
+      </div>
     </main>
-
-    <script src="../assets/js/projects-tryhackme.js"></script>
-</body>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="badge-pair" aria-hidden="true"
+              ><img
+                class="badge-light"
+                src="../assets/logos/jtl-light.svg"
+                width="605"
+                height="363"
+                alt="" /><img
+                class="badge-dark"
+                src="../assets/logos/jtl-dark.svg"
+                width="605"
+                height="363"
+                alt=""
+            /></span>
+            <div><strong>Jon Thaddeus Laguitao</strong></div>
+          </div>
+          <p class="footer-quote" lang="fil">Kapag may alitaptap, tumingin sa mga ulap.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
