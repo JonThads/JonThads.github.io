@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="A self-hosted service for asking natural-language questions about repository documentation, with cited sources."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>ReposRAG | Jon Thaddeus Laguitao</title>
+    <script>
+      try {
+        const t = localStorage.getItem('theme');
+        document.documentElement.dataset.theme =
+          t === 'light' || t === 'dark'
+            ? t
+            : matchMedia('(prefers-color-scheme:dark)').matches
+              ? 'dark'
+              : 'light';
+      } catch (e) {
+        document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme:dark)').matches
+          ? 'dark'
+          : 'light';
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="../index.html" aria-label="Jon Thaddeus Laguitao, home"
+          ><span class="badge-pair" aria-hidden="true"
+            ><img
+              class="badge-light"
+              src="../assets/logos/jtl-light.svg"
+              width="605"
+              height="363"
+              alt="" /><img
+              class="badge-dark"
+              src="../assets/logos/jtl-dark.svg"
+              width="605"
+              height="363"
+              alt="" /></span
+          ><span>Jon Thaddeus Laguitao</span></a
+        >
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="../index.html#about">About</a><a href="../index.html#education">Education</a
+          ><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a
+          ><a href="../projects.html" aria-current="page">Projects</a
+          ><a href="../blog/index.html">Blog</a><a href="../index.html#contact">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+          <svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z" /></svg
+          ><svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+            /></svg
+          ><span>Dark mode</span></button
+        ><button
+          type="button"
+          class="menu-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          Menu
+        </button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span
+          ><a href="../projects.html">Projects</a><span aria-hidden="true">/</span
+          ><span aria-current="page">ReposRAG</span>
+        </nav>
+        <section class="page-intro">
+          <p class="label">Personal project</p>
+          <h1>ReposRAG</h1>
+          <p>
+            A self-hosted service for asking natural-language questions about repository
+            documentation, with cited sources.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">FastAPI</span
+            ><span class="tag">Ollama</span><span class="tag">sentence-transformers</span
+            ><span class="tag">PostgreSQL</span><span class="tag">pgvector</span
+            ><span class="tag">DeepEval</span><span class="tag">Prometheus</span
+            ><span class="tag">Grafana</span>
+          </div>
+        </section>
+        <div class="detail-layout">
+          <div class="prose">
+            <h2>Project overview</h2>
+            <p>
+              A retrieval-augmented generation service that ingests repository documentation, embeds
+              text locally, retrieves relevant chunks from pgvector, and generates answers through a
+              local Ollama model.
+            </p>
+            <h2>Key features</h2>
+            <ul>
+              <li>
+                Ingest local or Git-hosted Markdown documentation and replace a repository corpus on
+                re-ingestion.
+              </li>
+              <li>
+                Query documentation with source chunks, similarity scores, and stage timings; stream
+                generated answers through server-sent events.
+              </li>
+              <li>
+                Manage ingested repositories, with optional API-key authentication and per-client
+                rate limiting.
+              </li>
+            </ul>
+            <h2>Engineering &amp; quality</h2>
+            <p>
+              Prometheus and Grafana expose retrieval, embedding, generation, and error metrics.
+              DeepEval evaluation scaffolding scores faithfulness and relevance using Ollama; its
+              placeholder expected answers need a real project-specific test set.
+            </p>
+            <h2>Scope &amp; ongoing work</h2>
+            <p>
+              Retrieval is vector-only, without hybrid search or reranking. Chunking uses
+              paragraph-based size limits. LangChain/LangGraph refactoring and Kubernetes deployment
+              are stretch plans, not implemented features.
+            </p>
+            <p>
+              Project summary based on the
+              <a href="https://github.com/JonThads/ReposRAG/blob/main/README.md"
+                >public repository documentation</a
+              >. See the repository for current implementation details.
+            </p>
+          </div>
+          <aside class="card detail-aside">
+            <p class="label">Explore the source</p>
+            <h2>ReposRAG</h2>
+            <p>Code, setup instructions, and project documentation.</p>
+            <a class="button primary" href="https://github.com/JonThads/ReposRAG"
+              >View on GitHub <span aria-hidden="true">↗</span></a
+            >
+            <p><a href="../projects.html">Back to all projects</a></p>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="badge-pair" aria-hidden="true"
+              ><img
+                class="badge-light"
+                src="../assets/logos/jtl-light.svg"
+                width="605"
+                height="363"
+                alt="" /><img
+                class="badge-dark"
+                src="../assets/logos/jtl-dark.svg"
+                width="605"
+                height="363"
+                alt=""
+            /></span>
+            <div><strong>Jon Thaddeus Laguitao</strong></div>
+          </div>
+          <p class="footer-quote" lang="fil">Kapag may alitaptap, tumingin sa mga ulap.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

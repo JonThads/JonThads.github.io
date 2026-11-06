@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="The personal portfolio of Jon Thaddeus Laguitao. Software testing, engineering, and continuous learning."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Signals & Sandbox | Jon Thaddeus Laguitao</title>
+    <script>
+      try {
+        const t = localStorage.getItem('theme');
+        document.documentElement.dataset.theme =
+          t === 'light' || t === 'dark'
+            ? t
+            : matchMedia('(prefers-color-scheme:dark)').matches
+              ? 'dark'
+              : 'light';
+      } catch (e) {
+        document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme:dark)').matches
+          ? 'dark'
+          : 'light';
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="../index.html" aria-label="Jon Thaddeus Laguitao, home"
+          ><span class="badge-pair" aria-hidden="true"
+            ><img
+              class="badge-light"
+              src="../assets/logos/jtl-light.svg"
+              width="605"
+              height="363"
+              alt="" /><img
+              class="badge-dark"
+              src="../assets/logos/jtl-dark.svg"
+              width="605"
+              height="363"
+              alt="" /></span
+          ><span>Jon Thaddeus Laguitao</span></a
+        >
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="../index.html#about">About</a><a href="../index.html#education">Education</a
+          ><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a
+          ><a href="../projects.html">Projects</a
+          ><a href="../blog/index.html" aria-current="page">Blog</a
+          ><a href="../index.html#contact">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+          <svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z" /></svg
+          ><svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+            /></svg
+          ><span>Dark mode</span></button
+        ><button
+          type="button"
+          class="menu-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          Menu
+        </button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span
+          ><span aria-current="page">Blog</span>
+        </nav>
+        <section class="page-intro">
+          <p class="label signal">Notes from the workbench</p>
+          <div class="blog-title-row">
+            <img
+              class="blog-mark"
+              src="../assets/logos/signals-sandbox-v2.svg"
+              width="48"
+              height="48"
+              alt=""
+              aria-hidden="true"
+            />
+            <h1>Signals &amp; Sandbox</h1>
+          </div>
+          <p>One space for what I notice, what I try, and what I learn along the way.</p>
+          <div class="callout">
+            <span class="label">The first pages are taking shape</span>
+            <p>
+              The two posts below are samples for this new blog. They show the format; they are not
+              published accounts of my work.
+            </p>
+          </div>
+        </section>
+        <div class="filters" data-filter-scope>
+          <div class="filter-buttons" role="group" aria-label="Filter posts by topic">
+            <button class="filter-button" type="button" data-filter-value="all" aria-pressed="true">
+              All topics</button
+            ><button
+              class="filter-button"
+              type="button"
+              data-filter-value="qa"
+              aria-pressed="false"
+            >
+              QA</button
+            ><button
+              class="filter-button"
+              type="button"
+              data-filter-value="security"
+              aria-pressed="false"
+            >
+              Security</button
+            ><button
+              class="filter-button"
+              type="button"
+              data-filter-value="data"
+              aria-pressed="false"
+            >
+              Data
+            </button>
+          </div>
+        </div>
+        <p class="results-status" role="status" aria-live="polite"></p>
+        <div class="post-grid">
+          <article class="card post-card" data-post data-topics="qa api testing">
+            <div class="post-top">
+              <div class="blog-title-row">
+                <img
+                  class="blog-mark"
+                  src="../assets/logos/signals-sandbox-v2.svg"
+                  width="48"
+                  height="48"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="label signal">Signals &amp; Sandbox</span>
+              </div>
+              <span class="sample">Sample post</span>
+            </div>
+            <h3>
+              <a href="../blog/a-small-check-with-a-clear-purpose.html"
+                >A small check with a clear purpose</a
+              >
+            </h3>
+            <div class="post-meta"><time datetime="2026-11-06">6 Nov 2026</time> · 3 min read</div>
+            <p>
+              A sample note on making an API assertion useful, readable, and easy to investigate.
+            </p>
+            <div class="tags"><span class="tag">QA</span><span class="tag">API Testing</span></div>
+            <a class="text-link" href="../blog/a-small-check-with-a-clear-purpose.html"
+              >Read the sample <span aria-hidden="true">↗</span></a
+            >
+          </article>
+          <article class="card post-card" data-post data-topics="security learning">
+            <div class="post-top">
+              <div class="blog-title-row">
+                <img
+                  class="blog-mark"
+                  src="../assets/logos/signals-sandbox-v2.svg"
+                  width="48"
+                  height="48"
+                  alt=""
+                  aria-hidden="true"
+                /><span class="label signal">Signals &amp; Sandbox</span>
+              </div>
+              <span class="sample">Sample post</span>
+            </div>
+            <h3>
+              <a href="../blog/leave-room-for-the-experiment.html">Leave room for the experiment</a>
+            </h3>
+            <div class="post-meta"><time datetime="2026-11-06">6 Nov 2026</time> · 3 min read</div>
+            <p>A sample note on asking a focused question before reaching for another tool.</p>
+            <div class="tags">
+              <span class="tag">Security</span><span class="tag">Learning</span>
+            </div>
+            <a class="text-link" href="../blog/leave-room-for-the-experiment.html"
+              >Read the sample <span aria-hidden="true">↗</span></a
+            >
+          </article>
+        </div>
+        <div class="empty-state" hidden>
+          <h2>No posts on this topic yet</h2>
+          <p>Choose another topic to explore the sample posts.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="badge-pair" aria-hidden="true"
+              ><img
+                class="badge-light"
+                src="../assets/logos/jtl-light.svg"
+                width="605"
+                height="363"
+                alt="" /><img
+                class="badge-dark"
+                src="../assets/logos/jtl-dark.svg"
+                width="605"
+                height="363"
+                alt=""
+            /></span>
+            <div><strong>Jon Thaddeus Laguitao</strong></div>
+          </div>
+          <p class="footer-quote" lang="fil">Kapag may alitaptap, tumingin sa mga ulap.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
