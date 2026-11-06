@@ -1,3 +1,25 @@
+# Changelog
+
+All notable changes to this project are documented here, following
+[Common Changelog](https://common-changelog.org/). Untagged work accumulates
+under Unreleased.
+
+## Unreleased
+
+### Added
+
+- Add `CLAUDE.md` and `AGENTS.md` so AI agents follow the project standards
+- Add `docs/workflow/claude-instructions.md` (branching, commits, comments,
+  changelog, documentation rules) adapted from the Pickle Rick standards
+- Add `docs/workflow/implementation-workflow.md` (eight-stage workflow)
+
+### Changed
+
+- Convert this changelog to the Common Changelog format; entries below are
+  legacy and keep their original wording
+
+## Legacy entries (pre-Common Changelog)
+
 v1.4.0
 	[FEATURE] Selenium and TryHackMe
     [DOCS] Added Changelog, .gitignore, Code of Conduct, Revised Readme,
