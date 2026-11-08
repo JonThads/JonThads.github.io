@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="How I use the CARE framework (Context, Action, Result, Example) to turn vague AI requests into specific, useful prompts."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <title>Prompt Engineering with the CARE Framework | Jon Thaddeus Laguitao</title>
+    <script>
+      try {
+        const t = localStorage.getItem('theme');
+        document.documentElement.dataset.theme =
+          t === 'light' || t === 'dark'
+            ? t
+            : matchMedia('(prefers-color-scheme:dark)').matches
+              ? 'dark'
+              : 'light';
+      } catch (e) {
+        document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme:dark)').matches
+          ? 'dark'
+          : 'light';
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="../assets/logos/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tokens.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/main.js" defer></script>
+      <link rel="stylesheet" href="../assets/css/v21.css">
+    <script src="../assets/js/v21.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="../index.html" aria-label="Jon Thaddeus Laguitao, home"
+          ><span class="badge-pair" aria-hidden="true"
+            ><img
+              class="badge-light"
+              src="../assets/logos/jtl-light.svg"
+              width="605"
+              height="363"
+              alt="" /><img
+              class="badge-dark"
+              src="../assets/logos/jtl-dark.svg"
+              width="605"
+              height="363"
+              alt="" /></span
+          ><span>Jon Thaddeus Laguitao</span></a
+        >
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="../index.html#about">About</a><a href="../index.html#education">Education</a
+          ><a href="../index.html#experience">Experience</a><a href="../index.html#skills">Skills</a
+          ><a href="../projects.html">Projects</a
+          ><a href="../blog/index.html" aria-current="page">Blog</a
+          ><a href="../index.html#contact">Contact</a>
+        </nav>
+        <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
+          <svg
+            class="moon-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z" /></svg
+          ><svg
+            class="sun-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+            /></svg
+          ><span>Dark mode</span></button
+        ><button
+          type="button"
+          class="menu-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="Open navigation menu"
+        >
+          Menu
+        </button>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a><span aria-hidden="true">/</span
+          ><a href="index.html">Blog</a><span aria-hidden="true">/</span
+          ><span aria-current="page">Prompt Engineering with the CARE Framework</span>
+        </nav>
+        <div class="reader-layout"><aside class="reader-toc" aria-label="Reading tools"><details><summary>On this page</summary><nav aria-label="Article contents"><a href="#what-a-prompt-is">What a prompt is</a><a href="#when-simple-is-not-enough">When simple is not enough</a><a href="#what-prompt-engineering-is">What prompt engineering is</a><a href="#the-care-framework">The CARE framework</a><a href="#care-in-action-the-cat">CARE in action: the cat</a><a href="#care-at-work">CARE at work</a><a href="#lessons-and-next-experiment">Lessons and next experiment</a></nav></details><div class="reader-progress-wrap"><div class="reader-progress-label"><label for="reading-progress">Reading progress</label><span data-reading-percent aria-hidden="true">0%</span></div><progress class="reader-progress" id="reading-progress" max="100" value="0" aria-label="Article reading progress"></progress></div></aside><article class="reading">
+          <header class="post-header">
+            <div class="blog-title-row">
+              <img
+                class="blog-mark"
+                src="../assets/logos/signals-sandbox-v2.svg"
+                width="48"
+                height="48"
+                alt=""
+                aria-hidden="true"
+              /><a class="label signal" href="index.html">Signals &amp; Sandbox</a>
+            </div>
+            <h1>Prompt Engineering with the CARE Framework</h1>
+            <p class="post-meta">
+              <time datetime="2026-11-08">8 Nov 2026</time> · 5 min read · Jon Thaddeus Laguitao
+            </p>
+            <div class="tags"><span class="tag">AI / Prompting</span><span class="tag">Prompt Engineering</span></div>
+          <div class="reader-tools"><span>Save this note for another look.</span><button class="bookmark-button" type="button" data-bookmark="prompt-engineering-with-the-care-framework" data-post-title="Prompt Engineering with the CARE Framework" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span>Save</span></button></div><p class="reading-status" data-reading-status role="status" aria-live="polite"></p></header>
+          <div class="prose">
+            <p>
+              Most of us use AI in one way or another, from drafting essays and emails to generating
+              images and writing code. But how does an AI assistant know what we want? Through
+              prompts.
+            </p>
+            <h2 id="what-a-prompt-is" tabindex="-1">What a prompt is</h2>
+            <p>
+              A prompt is an instruction we give to an AI to get the result we want, like
+              &ldquo;Generate me an image of a cat&rdquo; or &ldquo;Please give me a 500-word essay
+              about the history of Napoleon Bonaparte.&rdquo; For many everyday tasks, an
+              instruction like that is enough.
+            </p>
+            <h2 id="when-simple-is-not-enough" tabindex="-1">When simple is not enough</h2>
+            <p>
+              Some work is more serious or detail-oriented: fixing a particular bug in a production
+              codebase, writing a spiel for a specific show segment, or drafting emails for
+              different audiences such as the C-suite, upper management, supervisors, and technical
+              teams. A one-line instruction leaves the AI guessing about all the details that
+              matter, and you end up reworking the output again and again.
+            </p>
+            <h2 id="what-prompt-engineering-is" tabindex="-1">What prompt engineering is</h2>
+            <p>
+              Prompt engineering is the skill of writing prompts that get customized, useful results
+              with minimal rework after the first response.
+            </p>
+            <p>
+              It helps to know why this works. AI models are probabilistic: they generate likely
+              responses instead of looking up one correct answer. A vague prompt leaves a lot of
+              room for the model to guess. A specific prompt narrows that room and guides the model
+              toward the answer you actually need.
+            </p>
+            <h2 id="the-care-framework" tabindex="-1">The CARE framework</h2>
+            <p>
+              There are many prompting frameworks. The one I use is CARE, which stands for:
+            </p>
+            <ul>
+              <li><strong>Context:</strong> what you want to achieve, and the background the AI needs.</li>
+              <li><strong>Action:</strong> the specific steps you want it to take.</li>
+              <li><strong>Result:</strong> what a good outcome looks like, so you can tell whether it worked.</li>
+              <li><strong>Example:</strong> a sample that shows the style, format, or quality you are after.</li>
+            </ul>
+            <h2 id="care-in-action-the-cat" tabindex="-1">CARE in action: the cat</h2>
+            <p>Start with the plain prompt:</p>
+            <div class="code-frame"><button type="button" class="copy-code" data-copy-code>Copy code</button><pre><code>Generate me an image of a cat.</code></pre></div>
+            <p>
+              You will get a cat, but probably a generic one. Now the same request, written with
+              CARE:
+            </p>
+            <div class="code-frame"><button type="button" class="copy-code" data-copy-code>Copy code</button><pre><code>CONTEXT
+I want an image of a cat similar to my black cat: a male Persian, about
+4 years old, curled up asleep in a loaf position, dreaming about eating
+a fish. My cat's photo is attached.
+
+ACTION
+1. Make the image realistic, not obviously AI-generated.
+2. Use the attached photo as a reference for my cat's appearance and color.
+3. Export the image as a .png file.
+4. Show it here in the chat first so I can review it.
+5. After I approve it, save it to my D: drive if you have file access;
+   if you don't, tell me the file name and format to use.
+
+RESULT
+A realistic, recognizable image of my cat that is ready for me to post
+on Facebook.
+
+EXAMPLE
+[Attached: a sample photo showing the realistic style I want.]</code></pre></div>
+            <p>
+              Each part does a different job. Context says what and why. Action says how and in
+              what order. Result defines done. Example shows the target. The output is an image made
+              for you, not a generic AI cat.
+            </p>
+            <div class="callout">
+              <span class="label">Workbench note</span>
+              <p>
+                Whether the AI can save a file depends on the tool. Chat-only assistants cannot
+                write to your drive, so write the Action for what your tool can really do.
+              </p>
+            </div>
+            <h2 id="care-at-work" tabindex="-1">CARE at work</h2>
+            <p>
+              The same four parts help with everyday engineering and QA tasks. Here is a
+              short illustration of turning rough notes into a clear bug report. It is a
+              sample prompt, not a real ticket.
+            </p>
+            <div class="code-frame"><button type="button" class="copy-code" data-copy-code>Copy code</button><pre><code>CONTEXT
+I am a QA engineer. Below are my rough notes from testing the checkout
+page in a staging environment. The audience is the developer who will
+fix it.
+
+ACTION
+1. Read the notes and separate what I observed from what I assume.
+2. Write a bug report with: title, steps to reproduce, expected result,
+   actual result, and environment.
+3. List any information still missing instead of guessing it.
+
+RESULT
+A report a developer can reproduce without asking me follow-up
+questions. No speculation about the cause.
+
+EXAMPLE
+[Paste one of your team's well-written bug reports here.]
+
+NOTES
+[Paste rough notes here.]</code></pre></div>
+            <p>
+              Asking the AI to list missing information, rather than fill it in, is a small Action
+              that prevents confident but invented details.
+            </p>
+            <h2 id="lessons-and-next-experiment" tabindex="-1">Lessons and next experiment</h2>
+            <ul>
+              <li>Be specific about the outcome. &ldquo;Good&rdquo; means different things to different readers.</li>
+              <li>Keep each part short. Too much context can bury the instruction.</li>
+              <li>Review the first response and refine the prompt, not just the output.</li>
+              <li>Never paste confidential or personal data into an AI tool unless you are allowed to.</li>
+            </ul>
+            <p>
+              My next question: which of the four parts changes the quality of the output the most?
+              I would like to test that by removing one part at a time and comparing the results.
+            </p>
+          </div>
+          <div class="article-footer">
+            <a class="text-link" href="index.html">← Back to the blog</a>
+          </div>
+        </article></div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="badge-pair" aria-hidden="true"
+              ><img
+                class="badge-light"
+                src="../assets/logos/jtl-light.svg"
+                width="605"
+                height="363"
+                alt="" /><img
+                class="badge-dark"
+                src="../assets/logos/jtl-dark.svg"
+                width="605"
+                height="363"
+                alt=""
+            /></span>
+            <div><strong>Jon Thaddeus Laguitao</strong></div>
+          </div>
+          <p class="footer-quote" lang="fil">Kapag may alitaptap, tumingin sa mga ulap.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

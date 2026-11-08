@@ -76,7 +76,7 @@
         status.textContent =
           count +
           ' ' +
-          (cards[0]?.hasAttribute('data-project') ? 'project' : 'sample post') +
+          (cards[0]?.hasAttribute('data-project') ? 'project' : 'post') +
           (count === 1 ? '' : 's') +
           ' shown';
       if (empty) {
@@ -84,7 +84,7 @@
         const heading = empty.querySelector('[data-empty-heading]');
         const description = empty.querySelector('[data-empty-description]');
         if (heading) heading.textContent = savedOnly ? 'No saved posts in this view yet' : 'No posts on this topic yet';
-        if (description) description.textContent = savedOnly ? 'Save a post or choose another topic to find it here.' : 'Choose another topic to explore the sample posts.';
+        if (description) description.textContent = savedOnly ? 'Save a post or choose another topic to find it here.' : 'Choose another topic to explore the posts.';
       }
     };
     buttons.forEach((button) =>
