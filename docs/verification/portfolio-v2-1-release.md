@@ -26,4 +26,4 @@ The approved candidate is `236c7ca`, with review-publication documentation in `7
 
 This is a static, reversible release with no database migration. The previous production state is the recorded main commit above; a deployment fault can be addressed by reverting the production merge through the normal branch/PR workflow. No branch deletion or force push is part of this promotion.
 
-PR links, merge SHAs, and the Pages deployment result are recorded after GitHub returns them. Existing manual screen-reader, physical-device, independent accessibility-audit, and permission-denial testing limits remain documented in the mockup report.
+Integration PR: [v2.1 feature branch into qa, PR #5](https://github.com/JonThads/JonThads.github.io/pull/5). The following qa-to-main promotion PR and GitHub Actions deployment history are the final integration/publication records; the release handoff reports their returned links and results. This file records authorization and pre-promotion evidence. Existing manual screen-reader, physical-device, independent accessibility-audit, and permission-denial testing limits remain documented in the mockup report.
