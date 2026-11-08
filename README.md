@@ -4,13 +4,13 @@ Portfolio v2 is a buildless GitHub Pages site for Jon Thaddeus Laguitao: IT Prof
 
 ## Local preview and checks
 
-### Portfolio v2.1 review candidate
+### Portfolio v2.1
 
-The `feature/portfolio-v2-1-ui-ux-enhancements` branch contains an interactive review mockup, pending approval before a live update. It adds the supplied roadmap's pastel geometry and extracted tool logos to the home/blog opening cards while retaining the final JTL and blog marks. Reading tools include article contents, progress, local bookmarks, a saved-only listing, and a copy-code control. Bookmarks belong to the current browser/device; there is no account or cloud synchronization.
+The user approved the `feature/portfolio-v2-1-ui-ux-enhancements` candidate for promotion through qa and main on 8 Nov 2026. It adds the supplied roadmap's pastel geometry and extracted tool logos to the home/blog opening cards while retaining the final JTL and blog marks. Reading tools include article contents, progress, local bookmarks, a saved-only listing, and a copy-code control. Bookmarks belong to the current browser/device; there is no account or cloud synchronization.
 
 The candidate adds `assets/css/v21.css` and `assets/js/v21.js` to each active page. New colors live in `tokens.css`. Shared responsive sizing now comes from `:root` so light and dark receive the same media-query values. A new article copied from the template must update its `data-bookmark` slug and `data-post-title` along with the title, date, content, and listing card. Article heading IDs and contents links must stay paired.
 
-See [the 2.1 review plan](docs/planning/portfolio-v2-1-ui-ux.md) and [validation notes](docs/verification/portfolio-v2-1-mockup.md). The private Sites review publication is separate from the live GitHub Pages site and previous v2 Sites publication. No production promotion is part of this review task.
+See [the 2.1 review plan](docs/planning/portfolio-v2-1-ui-ux.md), [validation notes](docs/verification/portfolio-v2-1-mockup.md), and [production promotion record](docs/verification/portfolio-v2-1-release.md). The private Sites review publication remains separate from the GitHub Pages site and previous v2 Sites publication.
 
 ### Serving and checking locally
 

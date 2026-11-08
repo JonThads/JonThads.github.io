@@ -19,6 +19,7 @@ under Unreleased.
 
 ### Changed
 
+- Record the user's 8 Nov 2026 approval to promote the reviewed v2.1 enhancement branch through qa and main; retain the mockup's validation evidence and document the GitHub Pages release ([promotion record](docs/verification/portfolio-v2-1-release.md))
 - Include the user's final introduction/label copy edits and record explicit authorization to promote Portfolio v2 through `qa` and `main` ([PR #3](https://github.com/JonThads/JonThads.github.io/pull/3), [release record](docs/verification/portfolio-v2-release.md))
 - Format active HTML, CSS, JavaScript, scripts, and SVG markup for human readability; add shared editor/Prettier settings and update source checks to permit formatting while preserving archived hashes and artwork geometry ([verification](docs/verification/portfolio-v2-formatting.md))
 - Reconcile experience with the supplied latest resume, adding Skubbs and correcting Lane/Phoenix dates and duties; consolidate resume/profile technical skills into ten groups without proficiency ratings or planned-tool claims ([sources](docs/planning/portfolio-v2-content-refresh.md))
