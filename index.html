@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="assets/css/tokens.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/main.js" defer></script>
+      <link rel="stylesheet" href="assets/css/v21.css">
+    <script src="assets/js/v21.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -100,7 +102,7 @@
           <a href="index.html">Home</a><span aria-hidden="true">/</span
           ><span aria-current="page">Portfolio</span>
         </nav>
-        <section class="hero" aria-labelledby="hero-title">
+        <section class="hero" aria-labelledby="hero-title"><div class="pastel-field" aria-hidden="true"><span class="pastel-shape pastel-circle"></span><span class="pastel-shape pastel-disc"></span><span class="pastel-shape pastel-square"></span><span class="pastel-shape pastel-triangle"></span></div>
           <div>
             <p class="label">Quality Assurance · Engineering · AI-Assisted Testing</p>
             <h1 id="hero-title">A curious mind.<br />A practical<br />approach.</h1>
@@ -118,6 +120,7 @@
                 >Read the blog <span class="arrow" aria-hidden="true">↗</span></a
               >
             </div>
+<div class="toolset"><p class="toolset-caption">Tools I use and explore</p><div class="tool-strip" role="list" aria-label="Tools I use and explore"><span class="tool-token" role="listitem" title="TypeScript"><img src="assets/images/tools/typescript.png" alt="TypeScript" width="32" height="32"></span><span class="tool-token" role="listitem" title="Node.js"><img src="assets/images/tools/nodejs.png" alt="Node.js" width="32" height="32"></span><span class="tool-token" role="listitem" title="Playwright"><img src="assets/images/tools/playwright.png" alt="Playwright" width="32" height="32"></span><span class="tool-token" role="listitem" title="Appium"><img src="assets/images/tools/appium.png" alt="Appium" width="32" height="32"></span><span class="tool-token" role="listitem" title="GitHub Actions"><img src="assets/images/tools/github-actions.png" alt="GitHub Actions" width="32" height="32"></span><span class="tool-token" role="listitem" title="Docker"><img src="assets/images/tools/docker.png" alt="Docker" width="32" height="32"></span><span class="tool-token" role="listitem" title="k6"><img src="assets/images/tools/k6.png" alt="k6" width="32" height="32"></span><span class="tool-token" role="listitem" title="Git"><img src="assets/images/tools/git.png" alt="Git" width="32" height="32"></span><span class="tool-token" role="listitem" title="GitHub"><img src="assets/images/tools/github.png" alt="GitHub" width="32" height="32"></span></div></div>
           </div>
           <div class="identity-sheet" aria-label="JTL personal monogram">
             <div class="sheet-top">
@@ -143,7 +146,7 @@
               ><i class="registration reg-br" aria-hidden="true"></i>
             </div>
             <div class="sheet-bottom">
-              <strong>Built on curiosity.</strong><span class="label">Portfolio / v2.0</span>
+              <strong>Built on curiosity.</strong><span class="label">Portfolio / v2.1</span>
             </div>
           </div>
         </section>
@@ -505,7 +508,7 @@
               <a class="text-link" href="blog/index.html">Read the blog ↗</a>
             </div>
             <div class="post-grid in-panel">
-              <article class="card post-card" data-post data-topics="qa api testing">
+              <article class="card post-card" data-post data-post-id="a-small-check-with-a-clear-purpose" data-topics="qa api testing">
                 <div class="post-top">
                   <div class="blog-title-row">
                     <img
@@ -534,11 +537,11 @@
                 <div class="tags">
                   <span class="tag">QA</span><span class="tag">API Testing</span>
                 </div>
-                <a class="text-link" href="blog/a-small-check-with-a-clear-purpose.html"
+                <div class="post-actions"><a class="text-link" href="blog/a-small-check-with-a-clear-purpose.html"
                   >Read the sample <span aria-hidden="true">↗</span></a
-                >
+                ><button class="bookmark-button" type="button" data-bookmark="a-small-check-with-a-clear-purpose" data-post-title="A small check with a clear purpose" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span>Save</span></button></div>
               </article>
-              <article class="card post-card" data-post data-topics="security learning">
+              <article class="card post-card" data-post data-post-id="leave-room-for-the-experiment" data-topics="security learning">
                 <div class="post-top">
                   <div class="blog-title-row">
                     <img
@@ -564,9 +567,9 @@
                 <div class="tags">
                   <span class="tag">Security</span><span class="tag">Learning</span>
                 </div>
-                <a class="text-link" href="blog/leave-room-for-the-experiment.html"
+                <div class="post-actions"><a class="text-link" href="blog/leave-room-for-the-experiment.html"
                   >Read the sample <span aria-hidden="true">↗</span></a
-                >
+                ><button class="bookmark-button" type="button" data-bookmark="leave-room-for-the-experiment" data-post-title="Leave room for the experiment" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span>Save</span></button></div>
               </article>
             </div>
           </div>

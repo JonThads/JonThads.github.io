@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="../assets/css/tokens.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <script src="../assets/js/main.js" defer></script>
+      <link rel="stylesheet" href="../assets/css/v21.css">
+    <script src="../assets/js/v21.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -102,7 +104,7 @@
           ><a href="index.html">Blog</a><span aria-hidden="true">/</span
           ><span aria-current="page">A title for your next idea</span>
         </nav>
-        <article class="reading">
+        <div class="reader-layout"><aside class="reader-toc" aria-label="Reading tools"><details><summary>On this page</summary><nav aria-label="Article contents"><a href="#what-i-wanted-to-understand">What I wanted to understand</a><a href="#what-i-would-try-next">What I would try next</a></nav></details><div class="reader-progress-wrap"><div class="reader-progress-label"><label for="reading-progress">Reading progress</label><span data-reading-percent aria-hidden="true">0%</span></div><progress class="reader-progress" id="reading-progress" max="100" value="0" aria-label="Article reading progress"></progress></div></aside><article class="reading">
           <header class="post-header">
             <div class="blog-title-row">
               <img
@@ -120,29 +122,29 @@
               <time datetime="2026-11-06">6 Nov 2026</time> · 3 min read · Jon Thaddeus Laguitao
             </p>
             <div class="tags"><span class="tag">QA</span></div>
-          </header>
+          <div class="reader-tools"><span>Save this note for another look.</span><button class="bookmark-button" type="button" data-bookmark="post-template" data-post-title="A title for your next idea" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span>Save</span></button></div><p class="reading-status" data-reading-status role="status" aria-live="polite"></p></header>
           <div class="prose">
             <p>
               Replace this opening with the question, observation, or experiment that started your
               post.
             </p>
-            <h2>What I wanted to understand</h2>
+            <h2 id="what-i-wanted-to-understand" tabindex="-1">What I wanted to understand</h2>
             <p>
               Describe the context in plain language. Separate what you observed from what you
               inferred.
             </p>
-            <pre><code>// Add a small, relevant code example here.</code></pre>
+            <div class="code-frame"><button type="button" class="copy-code" data-copy-code>Copy code</button><pre><code>// Add a small, relevant code example here.</code></pre></div>
             <div class="callout">
               <span class="label">Workbench note</span>
               <p>Add one useful caveat or takeaway.</p>
             </div>
-            <h2>What I would try next</h2>
+            <h2 id="what-i-would-try-next" tabindex="-1">What I would try next</h2>
             <p>Close with the next question.</p>
           </div>
           <div class="article-footer">
             <a class="text-link" href="index.html">← Back to the blog</a>
           </div>
-        </article>
+        </article></div>
       </div>
     </main>
     <footer class="site-footer">

@@ -1,5 +1,4 @@
-:root,
-:root[data-theme='light'] {
+:root {
   color-scheme: light;
   --surface: #f7f5ef;
   --surface-raised: #ffffff;
@@ -69,4 +68,22 @@
     --display-xl: 44px;
     --display-l: 36px;
   }
+}
+
+/* Portfolio 2.1 pastel surfaces; layout values are shared between themes. */
+:root {
+  --pastel-lavender: #ece8f6;
+  --pastel-blush: #f9e3e7;
+  --pastel-mint: #e4efd9;
+  --pastel-sky: #e0edf7;
+  --pastel-honey: #fbecc6;
+  --tool-surface: #ffffff;
+  --reader-rail: 208px;
+}
+:root[data-theme='dark'] {
+  --pastel-lavender: #29263f;
+  --pastel-blush: #3a2836;
+  --pastel-mint: #20372f;
+  --pastel-sky: #1c3048;
+  --pastel-honey: #3b3222;
 }

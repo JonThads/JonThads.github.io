@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="../assets/css/tokens.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <script src="../assets/js/main.js" defer></script>
+      <link rel="stylesheet" href="../assets/css/v21.css">
+    <script src="../assets/js/v21.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -102,7 +104,7 @@
           ><a href="index.html">Blog</a><span aria-hidden="true">/</span
           ><span aria-current="page">Leave room for the experiment</span>
         </nav>
-        <article class="reading">
+        <div class="reader-layout"><aside class="reader-toc" aria-label="Reading tools"><details><summary>On this page</summary><nav aria-label="Article contents"><a href="#give-curiosity-a-boundary">Give curiosity a boundary</a><a href="#record-the-observation">Record the observation</a><a href="#make-the-next-step-smaller">Make the next step smaller</a></nav></details><div class="reader-progress-wrap"><div class="reader-progress-label"><label for="reading-progress">Reading progress</label><span data-reading-percent aria-hidden="true">0%</span></div><progress class="reader-progress" id="reading-progress" max="100" value="0" aria-label="Article reading progress"></progress></div></aside><article class="reading">
           <header class="post-header">
             <div class="blog-title-row">
               <img
@@ -122,13 +124,13 @@
             <div class="tags">
               <span class="tag">Security</span><span class="tag">Learning</span>
             </div>
-          </header>
+          <div class="reader-tools"><span>Save this note for another look.</span><button class="bookmark-button" type="button" data-bookmark="leave-room-for-the-experiment" data-post-title="Leave room for the experiment" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span>Save</span></button></div><p class="reading-status" data-reading-status role="status" aria-live="polite"></p></header>
           <div class="prose">
             <p>
               This sample explores a simple habit: before opening a new tool, write down the
               question the experiment should answer.
             </p>
-            <h2>Give curiosity a boundary</h2>
+            <h2 id="give-curiosity-a-boundary" tabindex="-1">Give curiosity a boundary</h2>
             <p>
               There is always another command to try or another tutorial to follow. A focused
               question makes it easier to decide what to investigate and when to stop.
@@ -138,7 +140,7 @@
               example log entries? The goal would be to describe the evidence and the uncertainty,
               then decide what information I would need next.
             </p>
-            <h2>Record the observation</h2>
+            <h2 id="record-the-observation" tabindex="-1">Record the observation</h2>
             <p>I would keep a short note with three parts:</p>
             <ul>
               <li>The question I started with.</li>
@@ -152,7 +154,7 @@
                 assessment, a finding, or a result from a real system.
               </p>
             </div>
-            <h2>Make the next step smaller</h2>
+            <h2 id="make-the-next-step-smaller" tabindex="-1">Make the next step smaller</h2>
             <p>
               A good experiment does not have to answer everything. It should leave me with a
               clearer observation and a more useful next question.
@@ -161,7 +163,7 @@
           <div class="article-footer">
             <a class="text-link" href="index.html">← Back to the blog</a>
           </div>
-        </article>
+        </article></div>
       </div>
     </main>
     <footer class="site-footer">

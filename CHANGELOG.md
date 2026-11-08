@@ -8,6 +8,7 @@ under Unreleased.
 
 ### Added
 
+- Add a Portfolio v2.1 review candidate with roadmap-inspired pastel opening cards and tool logos, article contents, reading progress, device-local bookmarks, and a saved-post view; retain the approved identity and sample-post labeling ([review plan](docs/planning/portfolio-v2-1-ui-ux.md))
 - Add ClockWise, Pickle-Rick, Tokenomics MCP, and ReposRAG project cards and detail pages based on their public GitHub documentation, with source links and explicit scope limitations
 - Add the unified Signals & Sandbox blog, two clearly labeled sample posts, reusable post template, and topic filters from the [approved reference](docs/planning/portfolio-v2-template/HANDOFF.md)
 - Retain the complete approved template package and its hashes; add dependency-free local preview and source-fidelity checks with [local verification evidence](docs/verification/portfolio-v2.md)
@@ -28,6 +29,7 @@ under Unreleased.
 
 ### Fixed
 
+- Keep mobile light/dark geometry consistent by removing the light theme's higher-specificity shared sizing declarations and assigning stable dimensions to the theme/menu controls; validate the candidate before live integration
 - Resolve custom 404 assets and recovery links from the site root so missing nested URLs retain styling and working navigation
 
 ## Legacy entries (pre-Common Changelog)
