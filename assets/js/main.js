@@ -61,12 +61,14 @@
     let active = 'all';
     const update = () => {
       const q = (search?.value || '').toLowerCase().trim();
+      const savedOnly = scope.querySelector('[data-saved-only]')?.getAttribute('aria-pressed') === 'true';
       let count = 0;
       cards.forEach((card) => {
         const terms = card.dataset.filter || card.dataset.topics;
         const visible =
           (active === 'all' || terms.includes(active)) &&
-          card.textContent.toLowerCase().includes(q);
+          card.textContent.toLowerCase().includes(q) &&
+          (!savedOnly || window.portfolioReadingList?.has(card.dataset.postId));
         card.hidden = !visible;
         if (visible) count++;
       });
@@ -77,7 +79,13 @@
           (cards[0]?.hasAttribute('data-project') ? 'project' : 'sample post') +
           (count === 1 ? '' : 's') +
           ' shown';
-      if (empty) empty.hidden = count !== 0;
+      if (empty) {
+        empty.hidden = count !== 0;
+        const heading = empty.querySelector('[data-empty-heading]');
+        const description = empty.querySelector('[data-empty-description]');
+        if (heading) heading.textContent = savedOnly ? 'No saved posts in this view yet' : 'No posts on this topic yet';
+        if (description) description.textContent = savedOnly ? 'Save a post or choose another topic to find it here.' : 'Choose another topic to explore the sample posts.';
+      }
     };
     buttons.forEach((button) =>
       button.addEventListener('click', () => {
@@ -87,6 +95,12 @@
       }),
     );
     search?.addEventListener('input', update);
+    scope.querySelector('[data-saved-only]')?.addEventListener('click', (event) => {
+      const button = event.currentTarget;
+      button.setAttribute('aria-pressed', String(button.getAttribute('aria-pressed') !== 'true'));
+      update();
+    });
+    document.addEventListener('portfolio:saved-posts-changed', update);
     update();
   }
 })();

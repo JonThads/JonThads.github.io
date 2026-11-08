@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="../assets/css/tokens.css" />
     <link rel="stylesheet" href="../assets/css/style.css" />
     <script src="../assets/js/main.js" defer></script>
+      <link rel="stylesheet" href="../assets/css/v21.css">
+    <script src="../assets/js/v21.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -102,7 +104,7 @@
           ><a href="index.html">Blog</a><span aria-hidden="true">/</span
           ><span aria-current="page">A small check with a clear purpose</span>
         </nav>
-        <article class="reading">
+        <div class="reader-layout"><aside class="reader-toc" aria-label="Reading tools"><details><summary>On this page</summary><nav aria-label="Article contents"><a href="#start-with-one-clear-expectation">Start with one clear expectation</a><a href="#keep-the-result-in-context">Keep the result in context</a><a href="#a-question-to-take-away">A question to take away</a></nav></details><div class="reader-progress-wrap"><div class="reader-progress-label"><label for="reading-progress">Reading progress</label><span data-reading-percent aria-hidden="true">0%</span></div><progress class="reader-progress" id="reading-progress" max="100" value="0" aria-label="Article reading progress"></progress></div></aside><article class="reading">
           <header class="post-header">
             <div class="blog-title-row">
               <img
@@ -120,27 +122,27 @@
               <time datetime="2026-11-06">6 Nov 2026</time> · 3 min read · Jon Thaddeus Laguitao
             </p>
             <div class="tags"><span class="tag">QA</span><span class="tag">API Testing</span></div>
-          </header>
+          <div class="reader-tools"><span>Save this note for another look.</span><button class="bookmark-button" type="button" data-bookmark="a-small-check-with-a-clear-purpose" data-post-title="A small check with a clear purpose" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span>Save</span></button></div><p class="reading-status" data-reading-status role="status" aria-live="polite"></p></header>
           <div class="prose">
             <p>
               A useful check starts with a question. In this sample, the question is simple: did a
               request return the status I expected?
             </p>
-            <h2>Start with one clear expectation</h2>
+            <h2 id="start-with-one-clear-expectation" tabindex="-1">Start with one clear expectation</h2>
             <p>
               An API response can contain a lot of information. Before adding assertions, I want to
               decide which behavior matters for the scenario. A status-code check is one small part
               of that picture.
             </p>
-            <pre><code>// Illustrative sample; not a production test suite.
+            <div class="code-frame"><button type="button" class="copy-code" data-copy-code>Copy code</button><pre><code>// Illustrative sample; not a production test suite.
 pm.test("The request returns 200", function () {
   pm.response.to.have.status(200);
-});</code></pre>
+});</code></pre></div>
             <p>
               The name tells the next reader what the check is trying to establish. If it fails,
               there is a clear starting point for investigation.
             </p>
-            <h2>Keep the result in context</h2>
+            <h2 id="keep-the-result-in-context" tabindex="-1">Keep the result in context</h2>
             <p>
               A passing status check does not establish that the response data is correct or that
               the entire workflow works. I would choose additional checks based on the API contract
@@ -153,7 +155,7 @@ pm.test("The request returns 200", function () {
                 checks.
               </p>
             </div>
-            <h2>A question to take away</h2>
+            <h2 id="a-question-to-take-away" tabindex="-1">A question to take away</h2>
             <p>
               When I read a test result, can I tell what was checked, what happened, and what still
               needs attention? That is a useful place to start.
@@ -162,7 +164,7 @@ pm.test("The request returns 200", function () {
           <div class="article-footer">
             <a class="text-link" href="index.html">← Back to the blog</a>
           </div>
-        </article>
+        </article></div>
       </div>
     </main>
     <footer class="site-footer">
