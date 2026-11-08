@@ -2,6 +2,16 @@
 
 Date: 8 Nov 2026. Scope: a review candidate on `feature/portfolio-v2-1-ui-ux-enhancements`, based on the current qa tree, which matches current main's site content. The detached starting worktree was behind the merge-only integration commits; current qa was fetched before creating the new branch. No existing branches were deleted.
 
+## Private Sites review
+
+Review URL: https://jon-thaddeus-portfolio-v21-review.resourcefulgrape2.chatgpt.site
+
+Blog entry point: https://jon-thaddeus-portfolio-v21-review.resourcefulgrape2.chatgpt.site/blog/index.html
+
+Candidate GitHub working-branch commit: `236c7ca`. Separate Sites source commit: `e255a476ddfddc341bf603f7e233c7e4488cd0a6`. Sites project: `appgprj_6af0048c362c81918e247d82d405d602`. Saved review version: `appgprj_6af0048c362c81918e247d82d405d602~appgver_e5e5f105f55c8191910661e2eef2a0d1`.
+
+The native Sites result confirmed this separate private review publication succeeded. No GitHub push/PR/merge or replacement of either existing live portfolio was performed. User review and production promotion remain pending.
+
 ## Confirmed checks
 
 - Reproduced v2's mobile theme defect at 360px: a 16px dark gutter versus 32px light gutter changed heading wrapping and moved following content. The theme button also varied in width. The shared-token specificity and control sizing fixes address these causes.
