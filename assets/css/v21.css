@@ -85,6 +85,7 @@ html { scrollbar-gutter: stable; }
 .saved-toggle[aria-pressed='true'] { background: var(--brand); color: var(--on-brand); border-color: var(--brand); }
 .post-art { position: relative; overflow: hidden; isolation: isolate; height: 148px; margin: -32px -32px 24px; padding: 24px 32px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; background: var(--pastel-sky); }
 .post-art[data-art='learning'] { background: var(--pastel-lavender); }
+.post-art[data-art='ai'] { background: var(--pastel-mint); }
 .post-card { overflow: hidden; }
 .post-art::after { content: ''; width: 160px; height: 160px; position: absolute; right: -36px; bottom: -100px; background: var(--pastel-honey); border-radius: 50%; z-index: -1; }
 .post-art-code { font: 600 48px/1 var(--font-mono); color: var(--brand); }
