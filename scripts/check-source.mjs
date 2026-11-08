@@ -16,6 +16,12 @@ const moved = {
 // Preserve quoted SVG attributes (especially path data), ignoring only formatting
 // between attributes/tags. This permits readable SVGs without redrawing artwork.
 const svgTokens = (text) => text.match(/"[^"]*"|'[^']*'|[^\s"']+/g).join('');
+// Sample posts retired when the first real post was published; the archived
+// reference still holds them, so only the live copies are exempt.
+const retired = new Set([
+  'blog/a-small-check-with-a-clear-purpose.html',
+  'blog/leave-room-for-the-experiment.html',
+]);
 let runtimeFiles = 0;
 let artworkChecks = 0;
 
@@ -26,6 +32,7 @@ for (const [name, expected] of Object.entries(snapshot.files_sha256)) {
   if (['README.md', 'CHANGELOG.md', 'VERIFICATION.md', 'LICENSE', 'NOTICE'].includes(name)) {
     continue;
   }
+  if (retired.has(name)) continue;
 
   const actual = await readFile(new URL(moved[name] || name, root));
   assert.ok(actual.length, `Nonempty runtime file: ${name}`);

@@ -28,7 +28,7 @@ Review [the local verification report](docs/verification/portfolio-v2.md) for re
 
 - `index.html`: introduction, mission, education, experience, skills, selected work, and LinkedIn contact.
 - `projects.html` and seven `projects/*.html` routes: searchable/filterable projects, including ClockWise, Pickle-Rick, Tokenomics MCP, ReposRAG, and the original three project pages with historical screenshots.
-- `blog/index.html`: Signals & Sandbox, a single publication with topic filters and two clearly labeled sample posts.
+- `blog/index.html`: Signals & Sandbox, a single publication with topic filters. The first post covers prompt engineering with the CARE framework.
 - `blog/post-template.html`: copy this complete template for a new post, update metadata/content/relative paths, then add a card with `data-post` and `data-topics` to the blog index. Remove sample labels only for real posts.
 - `404.html`: custom not-found page.
 
