@@ -4,6 +4,16 @@ Portfolio v2 is a buildless GitHub Pages site for Jon Thaddeus Laguitao: IT Prof
 
 ## Local preview and checks
 
+### Portfolio v2.1
+
+The user approved the `feature/portfolio-v2-1-ui-ux-enhancements` candidate for promotion through qa and main on 8 Nov 2026. It adds the supplied roadmap's pastel geometry and extracted tool logos to the home/blog opening cards while retaining the final JTL and blog marks. Reading tools include article contents, progress, local bookmarks, a saved-only listing, and a copy-code control. Bookmarks belong to the current browser/device; there is no account or cloud synchronization.
+
+The candidate adds `assets/css/v21.css` and `assets/js/v21.js` to each active page. New colors live in `tokens.css`. Shared responsive sizing now comes from `:root` so light and dark receive the same media-query values. A new article copied from the template must update its `data-bookmark` slug and `data-post-title` along with the title, date, content, and listing card. Article heading IDs and contents links must stay paired.
+
+See [the 2.1 review plan](docs/planning/portfolio-v2-1-ui-ux.md), [validation notes](docs/verification/portfolio-v2-1-mockup.md), and [production promotion record](docs/verification/portfolio-v2-1-release.md). The private Sites review publication remains separate from the GitHub Pages site and previous v2 Sites publication.
+
+### Serving and checking locally
+
 With Node.js installed, run `node scripts/preview.mjs` from the repository root and open [the local preview](http://127.0.0.1:4173). The server binds only to localhost and returns the custom 404 page for missing URLs. Keep it running while reviewing; Ctrl+C stops it. No package installation or build is required.
 
 Run `node scripts/check-source.mjs`, `node --check assets/js/main.js`, and `node --check scripts/preview.mjs` to verify the approved reference, implementation fidelity, and JavaScript syntax. The source check permits relocating the shared CSS/JS into `assets/` and the GitHub Pages adaptation in `404.html`: `<base href="/">` keeps assets and recovery links working at nested missing URLs. This is a root-hosted user site; deployment under a project subpath would require adjusting that base.
