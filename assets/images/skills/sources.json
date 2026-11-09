@@ -1,0 +1,228 @@
+[
+  {
+    "name": "python",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+    "sha256": "71493b4a732f0532b3a03a7a95da3ee11a65766367c8303b901ffbe7bf91a3a2"
+  },
+  {
+    "name": "javascript",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    "sha256": "5589af12bc012052ca51bb989ad86890b4404ffdcaf3ea670f720aafc22a15de"
+  },
+  {
+    "name": "typescript",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+    "sha256": "dedf94c96bf3fa869765daa67552d1b615592d1cee209f911cf64cbd3448726c"
+  },
+  {
+    "name": "php",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+    "sha256": "e111a2310eea247e8091065ed748e21886582a3e44d8dc2c2bbf3b413b1d88be"
+  },
+  {
+    "name": "html5",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+    "sha256": "9639bdcc13e2133de152d2eaec1eea106b173a6ea7e9fb86451e6c3e0a45bec6"
+  },
+  {
+    "name": "css3",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+    "sha256": "e4287489b5556b0aaeff19815083262bd6d10dc118302ff280432547abf83f60"
+  },
+  {
+    "name": "react",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+    "sha256": "7b9ef41cfe08eefafdc2abb515a85c580b15db116b7b008c1a8936dfe172d02a"
+  },
+  {
+    "name": "vite",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/vite/vite-original.svg",
+    "sha256": "4f1efe20dcae967dfe94ee5cab513caf5be12b9b1fe5ac9d0e73e352addcd678"
+  },
+  {
+    "name": "powershell",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/powershell/powershell-original.svg",
+    "sha256": "f72bc9843ff04005045b659f1ce960d03ddf7707fe02cb5d3dee373914a6d750"
+  },
+  {
+    "name": "selenium",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/selenium/selenium-original.svg",
+    "sha256": "aa2338673c2880af0489b216512dc14a63a2b1dff4f65ebde0f4c3f61beda693"
+  },
+  {
+    "name": "pytest",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/pytest/pytest-original.svg",
+    "sha256": "e3073e7f520866f93a40e76b633efc29715539150423178cdb2e33f7077e4be1"
+  },
+  {
+    "name": "postman",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg",
+    "sha256": "0b366c7a023328b0d95e8c90d9050519b8c31d206f8b34db17742488f72efccb"
+  },
+  {
+    "name": "fastapi",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg",
+    "sha256": "7ef41f6a363b00ff595e6d0b933c025c92cbfae29dc1df24b2f6eb8b476ee486"
+  },
+  {
+    "name": "mysql",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+    "sha256": "f73fa5d6b9da33fbf540ff96f5360c24b6d29d883ecfe6fcaecf89a8d3456067"
+  },
+  {
+    "name": "postgresql",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+    "sha256": "d68b3da8c1ba0aa8a9ff18b0599836e00928dae10962ad479f01f82b130e393f"
+  },
+  {
+    "name": "microsoftsqlserver",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+    "sha256": "f52b63cb5ff8c17efc079ae93eb7e2f1a04ca34eb736310c3576b19c0b9db21d"
+  },
+  {
+    "name": "express",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
+    "sha256": "e32b672c51097ec5489f0fe873f2024ccb24ff3abc6ac2525555a23cd878060b"
+  },
+  {
+    "name": "prometheus",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg",
+    "sha256": "cae70cfcf9a8b88de32ab1035819d0c7c9a2b278048112f8c9f99dae42b5b657"
+  },
+  {
+    "name": "grafana",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg",
+    "sha256": "2dec200d4e56521bec8dd463173c623b33b8c97e6159cac9b3ed00b6bff0f6ad"
+  },
+  {
+    "name": "jira",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/jira/jira-original.svg",
+    "sha256": "e5010dd0056d130e32fa3d0dc589aa1288370b525b4123658ea6eb90f53ca1db"
+  },
+  {
+    "name": "azuredevops",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/azuredevops/azuredevops-original.svg",
+    "sha256": "49122a38457209cda2d22a1e3af1b4ff159b67714d4e7b43899544555ee2823c"
+  },
+  {
+    "name": "vscode",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+    "sha256": "503d580c442a7071aae180d9b4766e312e4600bf0e9d842b30f56d0e614eceb8"
+  },
+  {
+    "name": "sonarqube",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/sonarqube/sonarqube-original.svg",
+    "sha256": "5e512ec5f637bd15b868247a58838c05cb0b9df361967db09faf8a42a924d1e2"
+  },
+  {
+    "name": "ollama",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/ollama/ollama-original.svg",
+    "sha256": "3f0c9f16aa6417078148e98df28bd056235d22594d1b1b44cd56aa575974c5a8"
+  },
+  {
+    "name": "huggingface",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/huggingface/huggingface-original.svg",
+    "sha256": "3b54de1f78f35be6d6bf908444124689caba53cea63e0857d72d4373c327077d"
+  },
+  {
+    "name": "linux",
+    "source": "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+    "sha256": "a3482e5b767e46b116f1f1eeb7183ba11c7c8b8a0825e8e71e15826b581c3099"
+  },
+  {
+    "name": "anthropic",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/anthropic.svg",
+    "sha256": "f2790e6bd96bb18955be1d7abb14c7a2e2b0badfc656878c4bd8f6572409b2b2"
+  },
+  {
+    "name": "apachejmeter",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/apachejmeter.svg",
+    "sha256": "6d6c296eb93054e823d287e135b56fd0d0ead8749bc4f9a06185f312bae93b36"
+  },
+  {
+    "name": "autocad",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/autocad.svg",
+    "sha256": "2a550df3481668888553f6b993127114c599df6c96e94f5ebd961472fcceac90"
+  },
+  {
+    "name": "claudecode",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/claudecode.svg",
+    "sha256": "d6e5dc54601508a10768502342ed47d5de5d92f2f91b64e47cfdbad850645dcf"
+  },
+  {
+    "name": "curl",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/curl.svg",
+    "sha256": "c2c3cbb1c832f165952c1a695f4c818e8121258bb21363a435c5c4d74f735301"
+  },
+  {
+    "name": "modelcontextprotocol",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/modelcontextprotocol.svg",
+    "sha256": "e8ff6fc36af8a08780bf95d14a7b3009c189d6758ea280c3be69debd87495436"
+  },
+  {
+    "name": "tryhackme",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/tryhackme.svg",
+    "sha256": "7b9b916419fb18a720b443bd0b5d97b20212a51c16495dc0f467cfe8bd11b787"
+  },
+  {
+    "name": "xampp",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/xampp.svg",
+    "sha256": "7e110fc767ecd42bdfc44e35d105329ff7ec27a22e2311604c3f2f567328835b"
+  },
+  {
+    "name": "microsoftword",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/microsoftword.svg",
+    "sha256": "089d5d5a1af09239c593e3c6230378f59a062b022a2843d07a3dc24ed03f8bb8"
+  },
+  {
+    "name": "microsoftexcel",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/microsoftexcel.svg",
+    "sha256": "84f3d66aab79ac3bc937c23d3bcc8e4e6832fafd725096741431511812bf65c9"
+  },
+  {
+    "name": "microsoftpowerpoint",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/microsoftpowerpoint.svg",
+    "sha256": "0ebbf13e617ffefd75fa9105a6b051d1ff373384060baca9cd42c648b81cc47e"
+  },
+  {
+    "name": "microsoftoutlook",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/microsoftoutlook.svg",
+    "sha256": "57c62844614fcc18c64a22f3252b426e3f963484fb3f589d3ea15d3166de968a"
+  },
+  {
+    "name": "microsoftteams",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/microsoftteams.svg",
+    "sha256": "1a2a55a4d317ec289b71cdb0de599261126f76d136b0675eda0f7fdcfdcd7a8d"
+  },
+  {
+    "name": "openai",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/openai.svg",
+    "sha256": "730508e7487d4e4ba758bfcca3e4cdfd31953938efad6d506acd502858559db3"
+  },
+  {
+    "name": "owasp",
+    "source": "https://raw.githubusercontent.com/simple-icons/simple-icons/11.15.0/icons/owasp.svg",
+    "sha256": "cfae266dd89879ffceaafa73acce6235b6da075693a84275adbbab00d3da1f64"
+  },
+  {
+    "name": "allure",
+    "source": "https://allurereport.org/svg/logo-report-sign.svg",
+    "sha256": "c5937f288a633ed6c62cdc867183c4a563ec3bd37b5dd1600252c3f6f4da77e2"
+  },
+  {
+    "name": "deepeval",
+    "source": "https://deepeval.com/icon.svg",
+    "sha256": "e38b96a5a03d71f1e8ee89976f2d9e2868779a01c598a096ab6850f6edffd360"
+  },
+  {
+    "name": "axe-core",
+    "source": "https://www.deque.com/wp-content/uploads/2025/10/favicon.svg",
+    "sha256": "472427da9b49475bab2e0fa39c633e3cd8ac8dee87fe10f977c68035a51db2e9"
+  },
+  {
+    "name": "newman",
+    "source": "https://github.com/postmanlabs/newman",
+    "note": "Postman parent-project mark, as used by the Newman repository.",
+    "sha256": "0b366c7a023328b0d95e8c90d9050519b8c31d206f8b34db17742488f72efccb"
+  }
+]

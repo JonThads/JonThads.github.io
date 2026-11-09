@@ -43,4 +43,5 @@ const server = http.createServer(async (req, res) => {
     res.writeHead(400).end('Bad request');
   }
 });
-server.listen(4173, '127.0.0.1', () => console.log('Portfolio preview: http://127.0.0.1:4173'));
+const port = Number(process.env.PORT || 4173);
+server.listen(port, '127.0.0.1', () => console.log(`Portfolio preview: http://127.0.0.1:${port}`));

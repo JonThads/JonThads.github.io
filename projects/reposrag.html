@@ -13,7 +13,7 @@
       try {
         const t = localStorage.getItem('theme');
         document.documentElement.dataset.theme =
-          t === 'light' || t === 'dark'
+          ['light', 'dark', 'gundam', 'claude'].includes(t)
             ? t
             : matchMedia('(prefers-color-scheme:dark)').matches
               ? 'dark'
@@ -62,30 +62,18 @@
           ><a href="../projects.html" aria-current="page">Projects</a
           ><a href="../blog/index.html">Blog</a><a href="../index.html#contact">Contact</a>
         </nav>
-        <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
-          <svg
-            class="moon-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z" /></svg
-          ><svg
-            class="sun-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path
-              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
-            /></svg
-          ><span>Dark mode</span></button
-        ><button
+        <label class="theme-picker">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" /><path d="M12 3v18M3 12h18" />
+          </svg>
+          <select data-theme-select name="theme" aria-label="Color theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="gundam">Gundam</option>
+            <option value="claude">Claude</option>
+          </select>
+          <svg class="theme-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+        </label><button
           type="button"
           class="menu-toggle"
           aria-controls="site-nav"
