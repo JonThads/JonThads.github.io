@@ -8,12 +8,12 @@
       content="The personal portfolio of Jon Thaddeus Laguitao. Software testing, engineering, and continuous learning."
     />
     <meta name="color-scheme" content="light dark" />
-    <title>Selenium and Pytest | Jon Thaddeus Laguitao</title>
+    <title>Selenium and pytest | Jon Thaddeus Laguitao</title>
     <script>
       try {
         const t = localStorage.getItem('theme');
         document.documentElement.dataset.theme =
-          t === 'light' || t === 'dark'
+          ['light', 'dark', 'gundam', 'claude'].includes(t)
             ? t
             : matchMedia('(prefers-color-scheme:dark)').matches
               ? 'dark'
@@ -62,30 +62,18 @@
           ><a href="../projects.html" aria-current="page">Projects</a
           ><a href="../blog/index.html">Blog</a><a href="../index.html#contact">Contact</a>
         </nav>
-        <button type="button" class="theme-toggle" aria-label="Switch to dark mode">
-          <svg
-            class="moon-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <path d="M20.7 13.2A9 9 0 0 1 10.8 3.3a9 9 0 1 0 9.9 9.9Z" /></svg
-          ><svg
-            class="sun-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.6"
-            aria-hidden="true"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path
-              d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
-            /></svg
-          ><span>Dark mode</span></button
-        ><button
+        <label class="theme-picker">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" /><path d="M12 3v18M3 12h18" />
+          </svg>
+          <select data-theme-select name="theme" aria-label="Color theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="gundam">Gundam</option>
+            <option value="claude">Claude</option>
+          </select>
+          <svg class="theme-chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
+        </label><button
           type="button"
           class="menu-toggle"
           aria-controls="site-nav"
@@ -101,14 +89,14 @@
         <nav class="breadcrumbs" aria-label="Breadcrumb">
           <a href="../index.html">Home</a><span aria-hidden="true">/</span
           ><a href="../projects.html">Projects</a><span aria-hidden="true">/</span
-          ><span aria-current="page">Selenium and Pytest</span>
+          ><span aria-current="page">Selenium and pytest</span>
         </nav>
         <section class="page-intro">
           <p class="label">Iterative development</p>
-          <h1>Selenium and Pytest</h1>
+          <h1>Selenium and pytest</h1>
           <p>Automating RecycLink</p>
           <div class="tags">
-            <span class="tag">Selenium</span><span class="tag">PyTest</span
+            <span class="tag">Selenium</span><span class="tag">pytest</span
             ><span class="tag">Python</span><span class="tag">Automated Testing</span
             ><span class="tag">Software Quality Assurance</span>
           </div>
@@ -118,12 +106,12 @@
             <h2>Project overview</h2>
             <p>
               This automated testing utilizing the Page Object Model (POM) Organization Pattern was
-              developed using Selenium and Pytest to showcase my skills using my own project web app
+              developed using Selenium and pytest to showcase my skills using my own project web app
               for my Postgraduate Studies - RecycLink
             </p>
             <h2>Key features</h2>
             <ul>
-              <li>Integration with test frameworks like Pytest</li>
+              <li>Integration with test frameworks like pytest</li>
               <li>Simple test syntax and fixtures</li>
               <li>Automatically detects and downloads compatible driver versions</li>
             </ul>
@@ -157,13 +145,13 @@
                   href="../assets/images/projects/selenium-recyclink/pytest_result.png"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Open full screenshot: Pytest execution results from the original project (new tab)"
+                  aria-label="Open full screenshot: pytest execution results from the original project (new tab)"
                   ><img
                     src="../assets/images/projects/selenium-recyclink/pytest_result.png"
-                    alt="Pytest execution results from the original project"
+                    alt="pytest execution results from the original project"
                     loading="lazy"
                 /></a>
-                <figcaption>Pytest execution results from the original project</figcaption>
+                <figcaption>pytest execution results from the original project</figcaption>
               </figure>
               <figure>
                 <a
@@ -187,7 +175,7 @@
               A browser automation framework used to simulate user actions and perform end-to-end
               web testing
             </p>
-            <h3>Pytest</h3>
+            <h3>pytest</h3>
             <p>
               A lightweight yet powerful testing framework for Python that simplifies writing,
               organizing, and running automated tests

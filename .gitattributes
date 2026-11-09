@@ -1,0 +1,2 @@
+# Keep vendored SVG bytes stable for the recorded SHA-256 provenance on Windows.
+assets/images/skills/*.svg text eol=lf

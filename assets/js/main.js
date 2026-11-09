@@ -1,8 +1,10 @@
 (() => {
   'use strict';
-  const root = document.documentElement,
-    toggle = document.querySelector('.theme-toggle');
+  const root = document.documentElement;
+  const picker = document.querySelector('[data-theme-select]');
+  const themes = new Set(['light', 'dark', 'gundam', 'claude']);
   const media = matchMedia('(prefers-color-scheme: dark)');
+  const systemTheme = () => (media.matches ? 'dark' : 'light');
   const saved = () => {
     try {
       return localStorage.getItem('theme');
@@ -11,26 +13,22 @@
     }
   };
   const apply = (theme) => {
-    root.dataset.theme = theme;
-    const next = theme === 'dark' ? 'light' : 'dark';
-    toggle?.setAttribute('aria-label', 'Switch to ' + next + ' mode');
-    if (toggle)
-      toggle.querySelector('span').textContent = next === 'light' ? 'Light mode' : 'Dark mode';
+    const selected = themes.has(theme) ? theme : systemTheme();
+    root.dataset.theme = selected;
+    if (picker) picker.value = selected;
   };
-  apply(root.dataset.theme || (media.matches ? 'dark' : 'light'));
-  toggle?.addEventListener('click', () => {
-    const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    apply(theme);
+  apply(root.dataset.theme || saved());
+  picker?.addEventListener('change', () => {
+    apply(picker.value);
     try {
-      localStorage.setItem('theme', theme);
+      localStorage.setItem('theme', root.dataset.theme);
     } catch {}
   });
-  media.addEventListener('change', (e) => {
-    if (!['light', 'dark'].includes(saved())) apply(e.matches ? 'dark' : 'light');
+  media.addEventListener('change', () => {
+    if (!themes.has(saved())) apply(systemTheme());
   });
-  window.addEventListener('storage', (e) => {
-    if (e.key === 'theme')
-      apply(['light', 'dark'].includes(e.newValue) ? e.newValue : media.matches ? 'dark' : 'light');
+  window.addEventListener('storage', (event) => {
+    if (event.key === 'theme' || event.key === null) apply(event.newValue);
   });
   const menu = document.querySelector('.menu-toggle'),
     nav = document.querySelector('.site-nav');

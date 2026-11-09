@@ -4,6 +4,14 @@ Portfolio v2 is a buildless GitHub Pages site for Jon Thaddeus Laguitao: IT Prof
 
 ## Local preview and checks
 
+### Portfolio v2.2
+
+The local `feature/portfolio-v2-2-color-themes` branch adds Gundam RX-78 and Claude themes alongside Light and Dark. Choose a theme from the header menu; the selection persists across pages and reloads in this browser. Gundam now includes a red shield motif, the approved JTL personal logo, yellow vents, blue panels, and mecha card details. Claude retains warm ivory and terracotta. Theme choices share typography and responsive layout rules. The mobile hero now preserves the space in "A practical approach."
+
+"Technical Skills & Tech Stack" now presents all 73 items as logo-then-name cards. Product and ecosystem logos are stored locally; non-product practices use original concept icons. Product names retain their own capitalization, including `pytest`, `axe-core`, `pgvector`, and `sentence-transformers`. See [artwork sources](assets/images/skills/README.md).
+
+The user approved Portfolio v2.2 for promotion through qa and main on 9 November 2026, including restoration of the JTL logo in the Gundam identity panel. Playwright was not run, as requested. See the [design plan](docs/planning/portfolio-v2-2-color-themes.md), [local verification](docs/verification/portfolio-v2-2-local.md), and [release record](docs/verification/portfolio-v2-2-release.md). To use a separate preview port in PowerShell, set `$env:PORT = '4175'` before running `node scripts/preview.mjs`.
+
 ### Portfolio v2.1
 
 The user approved the `feature/portfolio-v2-1-ui-ux-enhancements` candidate for promotion through qa and main on 8 Nov 2026. It adds the supplied roadmap's pastel geometry and extracted tool logos to the home/blog opening cards while retaining the final JTL and blog marks. Reading tools include article contents, progress, local bookmarks, a saved-only listing, and a copy-code control. Bookmarks belong to the current browser/device; there is no account or cloud synchronization.
