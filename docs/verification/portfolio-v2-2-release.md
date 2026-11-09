@@ -16,6 +16,10 @@ See [local verification](portfolio-v2-2-local.md) for source hashes, theme-initi
 
 Promotion starts from current `origin/qa` at `ee8cb7d`; current `origin/main` is `ff0a923`. Remote state was fetched immediately before release preparation, with no open PRs or intervening qa changes.
 
+Fresh release checks passed all 13 four-theme pages, 444 local links/assets/fragments, 73 skill cards, the explicit mobile word separator, and restoration of the JTL hero panel. Normalized trailing whitespace in vendored assets, refreshed their hashes, and pinned SVG line endings to LF for consistent Windows checkout verification.
+
+The feature was pushed and [PR #9 into qa](https://github.com/JonThads/JonThads.github.io/pull/9) was created. Before integration, GitHub reported it MERGEABLE/CLEAN with no status checks listed.
+
 ## Integration and deployment evidence
 
 Use the repository's live records for exact merge SHAs, timestamps, checks, and deployment outcome:

@@ -4,6 +4,8 @@ Local SVGs are used inside logo-then-name skill cards. Visible names provide the
 
 Sources and file SHA-256 hashes are recorded in `sources.json`:
 
+SVG line endings are pinned to LF in `.gitattributes` so Windows checkouts retain those hashes. Downloaded files have trailing whitespace normalized without changing their artwork.
+
 - Devicon: <https://github.com/devicons/devicon>, MIT license retained in `LICENSE-devicon.txt`.
 - Simple Icons: <https://github.com/simple-icons/simple-icons>, CC0 license retained in `LICENSE-simple-icons.txt`. Legacy Microsoft and OpenAI marks come from release 11.15.0; other marks were downloaded from the current repository on 9 November 2026. The downloaded SVGs are vendored; no runtime CDN is used.
 - Allure Report: official sign from <https://allurereport.org>.
